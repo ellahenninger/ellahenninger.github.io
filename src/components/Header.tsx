@@ -44,11 +44,18 @@ export default function Header() {
                 transition: 'left 0.32s cubic-bezier(.7,0,.3,1), width 0.32s cubic-bezier(.7,0,.3,1)',
               }}
             />
-            {navItems.map((item) => (
-              <li key={item.path} className={location.pathname === item.path ? 'active' : ''}>
-                <Link to={item.path}>{item.name}</Link>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              let isActive = location.pathname === item.path;
+              // Special handling for Research tab: active for /research and any /research/*
+              if (item.path === '/research' && location.pathname.startsWith('/research')) {
+                isActive = true;
+              }
+              return (
+                <li key={item.path} className={isActive ? 'active' : ''}>
+                  <Link to={item.path}>{item.name}</Link>
+                </li>
+              );
+            })}
             <li>
               <a
                 href={cvPdf}

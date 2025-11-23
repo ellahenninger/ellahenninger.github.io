@@ -1,3 +1,31 @@
+/* Custom tooltip for footer social icons (only tooltip, no native title) */
+.footer-content a[data-tooltip] {
+  position: relative;
+}
+.footer-content a[data-tooltip]:hover::after,
+.footer-content a[data-tooltip]:focus::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: 120%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 0.32em 0.8em;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.98rem;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  transition: opacity 0.18s;
+}
+.footer-content a[data-tooltip]::after {
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+}
 .footer {
   /* background: #272727; */
   border-top: 1px solid #e5e7eb;
