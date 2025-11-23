@@ -1,0 +1,26 @@
+.footer {
+  background: #272727;
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem 0;
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+}
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-content svg {
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+.footer-content a {
+  color: #cdcdcd;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.footer-content a:hover {
+  opacity: 1;
+  color: #ffffff;
+}
