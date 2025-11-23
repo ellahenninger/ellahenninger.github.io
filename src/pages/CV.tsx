@@ -11,7 +11,7 @@ function isSkillsSection(title: string) {
 export default function CVPage() {
     const sectionIds = cvSections.map(s => s.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''));
     return (
-        <div style={{ display: 'flex', flexDirection: 'row', maxWidth: 1100, margin: '3.5rem auto' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', maxWidth: 1100, margin: '0rem auto' }}>
             {/* Floating vertical tab menu */}
             <nav
                 className="cv-tab-bar-vertical"
@@ -94,7 +94,7 @@ export default function CVPage() {
                 style={{
                     flex: 1,
                     maxWidth: 900,
-                    padding: '2.5rem 1.2rem',
+                    padding: '1.2rem 1.2rem 2rem 1.2rem',
                     background: '#fff',
                     borderRadius: 14,
                     boxShadow: '0 2px 16px rgba(32,82,149,0.08)'
@@ -175,15 +175,28 @@ function Section({ title, children, divider, id }: { title: string, children: Re
         <section
             id={id}
             style={{
-                marginBottom: '2.5rem',
-                padding: '2.2rem 2.2rem 2rem 3.5rem', // extra left padding for connector
+                marginBottom: '1.2rem',
+                padding: '1.2rem 1.2rem 1rem 2rem', // extra left padding for connector
                 borderBottom: divider ? '1.5px solid #e5e8ef' : undefined,
                 background: '#f8fafc',
                 borderRadius: 10,
                 boxShadow: divider ? 'none' : '0 1px 4px rgba(32,82,149,0.03)',
             }}
         >
-            <h2 style={{ fontSize: '1.35rem', color: '#222222', fontWeight: 600, marginBottom: '1.1rem', letterSpacing: 0.01, textAlign: 'center' }}> {title} </h2>
+            <h2
+                style={{
+                    fontSize: '1.45rem',
+                    color: '#222222',
+                    fontWeight: 600,
+                    marginBottom: '0.7rem',
+                    marginTop: '0.5rem',
+                    padding: '0.4em 0',
+                    letterSpacing: 0.01,
+                    textAlign: 'center',
+                }}
+            >
+                {title}
+            </h2>
             <div>{children}</div>
         </section>
     );
