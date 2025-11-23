@@ -1,0 +1,33 @@
+/* Minimal clean layout for academic site */
+
+.site-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fafbfc;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0 3rem 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #222;
+}
+
+section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 2rem 2vw;
+  margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
