@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="home-landing">
+    <section>
       <div className="hero-bg">
         <div className={`hero-content fade-in${fadeIn ? ' visible' : ''}`}>
           <img

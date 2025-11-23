@@ -45,6 +45,10 @@ export default function Footer() {
             />
           </a>
         </div>
+
+        <div className="site-title footer-logo" style={{ marginBottom: '0.7rem', textAlign: 'center' }}>Ella Henninger</div>
+
+
         <div>
           &copy; {new Date().getFullYear()} Ella Henninger. All rights reserved.
         </div>
