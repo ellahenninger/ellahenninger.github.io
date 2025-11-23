@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { Link } from 'react-router-dom';
 import { projects } from './projectsData';
@@ -33,6 +34,13 @@ export default function Research() {
     });
   }
 
+
+  // For fade-in animation: trigger on tab change
+  const [fadeKey, setFadeKey] = useState(0);
+  useEffect(() => {
+    setFadeKey(prev => prev + 1);
+  }, [selectedTag]);
+
   const filteredProjects = sortProjects(
     selectedTag === 'All'
       ? projects
@@ -41,31 +49,28 @@ export default function Research() {
 
   return (
     <section className="research">
-      <h1>Research</h1>
-      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem', gap: '1rem', flexWrap: 'wrap' }}>
+      <div className="tab-bar">
         {tags.map(tag => (
           <button
             key={tag}
             onClick={() => setSelectedTag(tag)}
-            style={{
-              background: selectedTag === tag ? '#205295' : '#e3eafc',
-              color: selectedTag === tag ? '#fff' : '#205295',
-              border: 'none',
-              borderRadius: '4px',
-              padding: '0.4rem 1.1rem',
-              fontWeight: 500,
-              fontSize: '0.95rem',
-              cursor: 'pointer',
-              transition: 'background 0.2s, color 0.2s',
-            }}
+            className={`tab-btn${selectedTag === tag ? ' active' : ''}`}
+            type="button"
           >
             {tag}
           </button>
         ))}
       </div>
       <div className="articles-grid">
-        {filteredProjects.map(project => (
-          <Link className="article-card" to={project.link} key={project.id}>
+        {filteredProjects.map((project, idx) => (
+          <Link
+            className="article-card fadein"
+            to={project.link}
+            key={project.id + '-' + fadeKey}
+            style={{
+              animationDelay: `${0.08 * idx + 0.08}s`,
+            }}
+          >
             <img src={project.thumbnail} alt={project.title} className="article-thumb" />
             <div className="article-info">
               <h2>{project.title}</h2>

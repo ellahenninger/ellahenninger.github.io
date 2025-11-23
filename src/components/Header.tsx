@@ -14,7 +14,7 @@ export default function Header() {
   const location = useLocation();
   return (
     <header className="header">
-      <div className="header-content">
+      <div className="header-content header-vertical">
         <div className="site-title">Ella Henninger</div>
         <nav>
           <ul className="nav-list">
