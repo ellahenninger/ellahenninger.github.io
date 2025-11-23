@@ -48,13 +48,13 @@
 }
 
 .hero-label {
-  background: #e3eafc;
-  color: #205295;
+  background: #eeeeee;
+  color: #222222;
   font-size: 1.01rem;
   font-weight: 500;
   border-radius: 1.2rem;
   padding: 0.32em 1.1em;
-  border: 1px solid #b6c9f5;
+  border: 1px solid #dedede;
   letter-spacing: 0.01em;
   box-shadow: 0 1px 4px rgba(32, 82, 149, 0.04);
   user-select: none;
@@ -113,6 +113,11 @@
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   flex-shrink: 0;
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter 0.5s cubic-bezier(.7,0,.3,1);
+}
+.hero-img:hover {
+  filter: none;
 }
 
 .hero-text {

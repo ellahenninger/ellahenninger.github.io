@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-content header-vertical">
-        <div className="site-title">Ella Henninger</div>
+        <Link to="/" className="site-title">Ella Henninger</Link>
         <nav>
           <ul className="nav-list" ref={navRef} style={{ position: 'relative' }}>
             <div

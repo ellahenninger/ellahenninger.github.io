@@ -6,6 +6,12 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   margin-right: 2.2rem;
   flex-shrink: 0;
+  filter: grayscale(1);
+  transition: filter 0.3s;
+}
+.teaching-main-img:hover,
+.teaching-main-img:focus {
+  filter: grayscale(0);
 }
 
 .teaching {
@@ -50,7 +56,7 @@
 .teaching-main-text h2 {
   font-size: 1.7rem;
   margin-bottom: 0.7rem;
-  color: #205295;
+  color: #222222;
 }
 
 .teaching-main-text p {
@@ -80,7 +86,7 @@
 
 .teaching-section-title {
   margin-top: 0;
-  color: #205295;
+  color: #222222;
   font-size: 1.7rem;
   margin-bottom: 1.2rem;
   font-weight: 600;
@@ -129,14 +135,14 @@
 
 .teaching-class-title {
   font-size: 1.13rem;
-  color: #205295;
+  color: #222222;
   font-weight: 600;
   margin: 0;
 }
 
 .teaching-class-title {
   font-size: 1.25rem;
-  color: #205295;
+  color: #222222;
   font-weight: 600;
   margin: 0;
 }
@@ -149,7 +155,7 @@
 
 .teaching-class-meta {
   font-size: 1.02rem;
-  color: #205295;
+  color: #222222;
   margin-bottom: 0.2rem;
 }
 
@@ -160,15 +166,23 @@
 }
 
 .teaching-class-link {
-  color: #205295;
+  color: #fff;
+  background: #464646;
   font-weight: 500;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 1.01rem;
-  margin-top: 0.2rem;
+  margin-top: 0.7rem;
   align-self: flex-start;
-  transition: color 0.15s;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  border: none;
+  border-radius: 6px;
+  padding: 0.38rem 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(32,82,149,0.07);
 }
 
 .teaching-class-link:hover {
-  color: #d7263d;
+  background: #040404;
+  color: #fff;
+  text-decoration: none;
 }

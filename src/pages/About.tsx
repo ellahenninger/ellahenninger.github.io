@@ -48,8 +48,9 @@ export default function About() {
 
   return (
     <section className="about about-landing">
-      <div className="about-connector" />
-      <div className="about-profile-card">
+      
+      <div className="about-profile-card about-profile-row">
+        
         <img
           src={ellaImg}
           alt="Ella Henninger"
@@ -60,11 +61,14 @@ export default function About() {
           onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') openGallery(); }}
           aria-label="Open image gallery"
         />
-        <div className="about-profile-text">
-          <h2>The Group and I</h2>
-          <p>
-            PhD candidate at ETH Zurich studying how internal and external factors shape attitudes and behaviours toward the environment and air pollution mitigation, with a focus on social and economic inequalities. Interested in investigating these topics using advanced quantitative methods.
-          </p>
+        <div className="about-profile-text-wrapper">
+          <span className="about-vertical-separator" />
+          <div className="about-profile-text">
+            <h2>The Group and I</h2>
+            <p>
+              PhD candidate at ETH Zurich studying how internal and external factors shape attitudes and behaviours toward the environment and air pollution mitigation, with a focus on social and economic inequalities. Interested in investigating these topics using advanced quantitative methods.
+            </p>
+          </div>
         </div>
       </div>
       {/* Modal Gallery for profile image */}
@@ -84,6 +88,7 @@ export default function About() {
               Watch Ella discuss her research on environmental policy, social inequalities, and the importance of quantitative methods in understanding complex societal challenges.
             </p>
           </div>
+          <span className="about-vertical-separator" />
           <iframe
             width="480"
             height="270"

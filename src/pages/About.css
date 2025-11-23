@@ -1,23 +1,76 @@
-/* Unified section card style for About page */
-.about-section {
-  max-width: 900px;
+.about-contact-card {
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+.about-video-flex iframe {
+  filter: grayscale(1);
+  border-radius: 14px;
+  transition: filter 0.3s;
+}
+.about-video-flex iframe:hover,
+.about-video-flex iframe:focus {
+  filter: grayscale(0);
+}
+.about-profile-text h2,
+.about-video-text h2,
+.about-workshops h2,
+.about-contact-card h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.2rem;
+}
+.about-vertical-separator {
+  display: block;
+  width: 3px;
+  min-height: 180px;
+  background: #222;
+  border-radius: 2px;
+  margin: 0 2.2rem;
+  align-self: stretch;
+}
+.about-profile-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+}
+.about-profile-row .about-profile-img {
+  margin-right: 0;
+}
+.about-profile-row .about-profile-text-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.about-profile-text-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+
+.about-profile-text {
+  /* height: 100%; */
+  display: flex;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2.2rem;
-  margin-bottom: 2.5rem;
-    background: none;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
+  /* margin-top: 2.2rem; */
+  /* margin-bottom: 2.5rem; */
+  background: none;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: left;
   text-align: left;
-  padding: 2.5rem 2rem 1.5rem 2rem;
+  /* padding: 2.5rem 2rem 1.5rem 2rem; */
 }
+
 /* Contact card section layout for side-by-side address and details */
 .about-contact-flex {
   display: flex;
@@ -26,10 +79,12 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+
 .about-contact-address {
   min-width: 210px;
   font-style: normal;
 }
+
 .about-contact-details {
   display: flex;
   flex-direction: column;
@@ -37,12 +92,14 @@
   min-width: 170px;
   margin-left: 14rem;
 }
+
 .about-contact-phone span,
 .about-contact-email span {
-  color: #205295;
+  color: #222222;
   font-size: 1.01rem;
   font-weight: 500;
 }
+
 .about-contact-phone a,
 .about-contact-email a {
   color: #205295;
@@ -50,38 +107,37 @@
   font-size: 1.08rem;
   word-break: break-all;
 }
+
 @media (max-width: 600px) {
   .about-contact-flex {
     flex-direction: column;
     gap: 1.2rem;
   }
+
   .about-contact-details {
     min-width: 0;
   }
 }
-/* Contact card section */
-.about-contact-card {
-  /* Inherit all from .about-section */
-  
-}
+
+
 .about-contact-card h2 {
   margin-top: 0;
-  color: #205295;
-  font-size: 1.3rem;
   margin-bottom: 1.2rem;
-  font-weight: 600;
 }
+
 .about-contact-card address {
   font-style: normal;
   color: #444;
   font-size: 1.08rem;
   line-height: 1.7;
 }
+
 .about-contact-card a {
-  color: #205295;
+  color: #222222;
   text-decoration: underline;
   font-size: 1.08rem;
 }
+
 .about-landing {
   min-height: 100vh;
   display: flex;
@@ -91,54 +147,38 @@
   position: relative;
 }
 
-/* Connecting vertical line */
-.about-connector {
-  position: absolute;
-  left: 50%;
-  top: 180px;
-  transform: translateX(-50%);
-  width: 4px;
-  height: calc(100% - 320px);
-  /* background: linear-gradient(to bottom, #e3eafc 0%, #b6c9f5 100%); */
-  z-index: 0;
-  border-radius: 2px;
-  pointer-events: none;
-}
-.about-profile-card {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-    background: none;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-  padding: 2.5rem 2rem;
-  margin: 2.5rem auto 0 auto;
-  max-width: 1000px;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
+
+
 .about-profile-img {
   width: 560px;
   border-radius: 18px;
   object-fit: cover;
-    box-shadow: none;
+  box-shadow: none;
   flex-shrink: 0;
+  filter: grayscale(1);
+  transition: filter 0.3s;
 }
+.about-profile-img:hover,
+.about-profile-img:focus {
+  filter: grayscale(0);
+}
+
 .about-profile-text {
   text-align: left;
   max-width: 480px;
 }
+
 .about-profile-text h1 {
   font-size: 3.1rem;
   margin-bottom: 0.8rem;
-  color: #205295;
+  color: #222222;
 }
+
 .about-profile-text p {
   color: #444;
   font-size: 1.25rem;
 }
+
 .about-video-section {
   width: 100%;
   margin-bottom: 2.5rem;
@@ -148,38 +188,39 @@
   z-index: 1;
   margin-top: 2.5rem;
 }
+
 .about-video-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2.2rem;
-    background: none;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
+  background: none;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
   padding: 2rem 2.2rem;
   max-width: 1000px;
   width: 100%;
   margin-top: 0;
   position: relative;
 }
+
 .about-video-text {
   flex: 1 1 0;
   max-width: 340px;
   text-align: left;
 }
+
 .about-video-flex iframe {
   flex-shrink: 0;
 }
-.about-video-text h2 {
-  font-size: 1.7rem;
-  margin-bottom: 0.7rem;
-  color: #205295;
-}
+
+
 .about-video-text p {
   color: #444;
   font-size: 1.18rem;
 }
+
 .about-video-flex iframe {
   border-radius: 14px;
   box-shadow: none;
@@ -188,54 +229,62 @@
   max-width: 100%;
   aspect-ratio: 16/9;
 }
+
 .about-workshops {
   max-width: 800px;
   width: 100%;
-    background: none;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
+  background: none;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
   background: #f8f8f8;
   border-radius: 14px;
   border: 1px solid #dfdfdf;
   padding: 2.5rem 2rem 1.5rem 2rem;
   position: relative;
   z-index: 1;
-  box-shadow: 0 4px 24px rgba(32,82,149,0.08);
+  box-shadow: 0 4px 24px rgba(32, 82, 149, 0.08);
   display: flex;
   flex-direction: column;
   align-items: left;
 }
+
 .about-workshops h2 {
   margin-top: 0;
-  color: #205295;
-  font-size: 1.3rem;
+  color: #222222;
+  font-size: 2.5rem;
   margin-bottom: 1.2rem;
 }
+
 .about-workshops ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .about-workshop-item {
   margin-bottom: 1.5rem;
   border-bottom: none;
   padding-bottom: 1rem;
 }
+
 .about-workshop-item:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
 .about-workshop-title {
   font-weight: 600;
   font-size: 1.1rem;
-  color: #205295;
+  color: #222222;
 }
+
 .about-workshop-desc {
   color: #444;
   margin: 0.3rem 0 0.5rem 0;
 }
+
 .about-workshop-meta {
   font-size: 0.97rem;
   color: #666;
