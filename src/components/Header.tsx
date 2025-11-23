@@ -8,6 +8,7 @@ const navItems = [
   { name: 'About', path: '/about' },
   { name: 'Research', path: '/research' },
   { name: 'Teaching', path: '/teaching' },
+  { name: 'CV', path: '/cv' },
 ];
 
 import { useRef, useEffect, useState } from 'react';
@@ -56,15 +57,6 @@ export default function Header() {
                 </li>
               );
             })}
-            <li>
-              <a
-                href={cvPdf}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CV
-              </a>
-            </li>
           </ul>
         </nav>
       </div>

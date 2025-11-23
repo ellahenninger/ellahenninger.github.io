@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Research from './pages/Research';
 import Teaching from './pages/Teaching';
+import CV from './pages/CV';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ArticlePage from './pages/articles/ArticlePage';
@@ -21,6 +22,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/research" element={<Research />} />
             <Route path="/teaching" element={<Teaching />} />
+            <Route path="/cv" element={<CV />} />
             <Route path="/research/:slug" element={<ArticlePage />} />
           </Routes>
         </main>
