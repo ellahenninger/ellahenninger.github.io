@@ -38,8 +38,8 @@
   /* background: #fff; */
   /* border-radius: 14px; */
   /* box-shadow: 0 4px 24px rgba(32, 82, 149, 0.08); */
-  padding: 2.5rem 2rem;
-  margin: 2.5rem auto 0 auto;
+  padding: 0.5rem 0rem;
+  /* margin: 2.5rem auto 0 auto; */
   max-width: 900px;
   /* border: 1px solid #e9e9e9; */
 
@@ -71,7 +71,6 @@
   margin-right: auto;
   margin-top: 2.2rem;
   margin-bottom: 2.5rem;
-  background: #fff;
   border-radius: 14px;
   border: 1px solid #e9e9e9;
   padding: 2.5rem 2rem 1.5rem 2rem;

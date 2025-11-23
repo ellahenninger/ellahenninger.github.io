@@ -24,7 +24,7 @@
   display: block;
   width: 3px;
   min-height: 180px;
-  background: #222;
+  background: #eeeeee;
   border-radius: 2px;
   margin: 0 2.2rem;
   align-self: stretch;
@@ -134,7 +134,7 @@
 
 .about-contact-card a {
   color: #222222;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 1.08rem;
 }
 
