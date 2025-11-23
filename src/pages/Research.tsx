@@ -1,5 +1,7 @@
 
 import { useState } from 'react';
+
+import { Link } from 'react-router-dom';
 import { projects } from './projectsData';
 import type { ProjectTag, Project } from './projectsData';
 import './Research.css';
@@ -37,7 +39,7 @@ export default function Research() {
       </div>
       <div className="articles-grid">
         {filteredProjects.map(project => (
-          <a className="article-card" href={project.link} key={project.id}>
+          <Link className="article-card" to={project.link} key={project.id}>
             <img src={project.thumbnail} alt={project.title} className="article-thumb" />
             <div className="article-info">
               <h2>{project.title}</h2>
@@ -48,7 +50,7 @@ export default function Research() {
                 ))}
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>

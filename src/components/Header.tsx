@@ -1,4 +1,6 @@
+
 import { Link, useLocation } from 'react-router-dom';
+import cvPdf from '../assets/CV.pdf';
 import './Header.css';
 
 const navItems = [
@@ -21,6 +23,15 @@ export default function Header() {
                 <Link to={item.path}>{item.name}</Link>
               </li>
             ))}
+            <li>
+              <a
+                href={cvPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CV
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
