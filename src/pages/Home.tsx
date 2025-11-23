@@ -4,11 +4,22 @@ import './Home.css';
 
 import { useEffect, useState } from 'react';
 
+
 export default function Home() {
   const [fadeIn, setFadeIn] = useState(false);
+  const fullTitle = 'Ella Henninger';
+  const [typedTitle, setTypedTitle] = useState('');
   useEffect(() => {
     setFadeIn(true);
+    let i = 0;
+    const interval = setInterval(() => {
+      setTypedTitle(fullTitle.slice(0, i + 1));
+      i++;
+      if (i === fullTitle.length) clearInterval(interval);
+    }, 90);
+    return () => clearInterval(interval);
   }, []);
+
   return (
     <section className="home-landing">
       <div className="hero-bg">
@@ -19,8 +30,14 @@ export default function Home() {
             className="hero-img"
           />
           <div className="hero-text">
-            <h1>Ella Henninger</h1>
-            <h2>Political Scientist<br />PhD Candidate at ETH Zurich</h2>
+            <h1>
+              <span>{typedTitle}</span>
+              <span className={typedTitle.length < fullTitle.length ? 'typing-cursor' : ''}></span>
+            </h1>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
+              <span className="hero-title-line" />
+              <h2 style={{ margin: 0 }}>Political Scientist<br />PhD Candidate at ETH Zurich</h2>
+            </div>
             <p>
               Exploring the drivers of environmental attitudes and air pollution mitigation, with a focus on social and economic inequalities. Passionate about using cutting-edge quantitative methods for impactful research.
             </p>
