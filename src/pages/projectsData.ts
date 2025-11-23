@@ -8,7 +8,11 @@ export interface Project {
   thumbnail: string;
   tags: ProjectTag[];
   link: string;
+  journal?: string;
+  authors?: string;
+  date?: string; // ISO format (YYYY-MM-DD)
 }
+
 
 export const projects: Project[] = [
   {
@@ -19,6 +23,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_accra.jpeg',
     tags: ['Policy brief'],
     link: '/research/climate-policy',
+    journal: undefined,
+    authors: 'Ella Henninger, John Doe',
+    date: '2025-10-01',
   },
   {
     id: '2',
@@ -28,6 +35,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_beyond the haze.jpeg',
     tags: ['Publication'],
     link: '/research/education-reform',
+    journal: 'Journal of Education Reform',
+    authors: 'Ella Henninger, Jane Smith',
+    date: '2024-06-15',
   },
   {
     id: '3',
@@ -37,6 +47,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_bike münster.jpeg',
     tags: ['Work in progress'],
     link: '/research/ai-social',
+    journal: undefined,
+    authors: 'Ella Henninger, Alex Kim',
+    date: '2025-11-01',
   },
   {
     id: '4',
@@ -46,6 +59,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_delhi.jpeg',
     tags: ['Policy brief'],
     link: '/research/healthcare-policy',
+    journal: undefined,
+    authors: 'Ella Henninger, Priya Patel',
+    date: '2025-09-01',
   },
   {
     id: '5',
@@ -55,6 +71,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_jakarta.jpeg',
     tags: ['Publication'],
     link: '/research/migration-trends',
+    journal: 'Migration Studies',
+    authors: 'Ella Henninger, Marco Rossi',
+    date: '2023-12-10',
   },
   {
     id: '6',
@@ -64,6 +83,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_map münster.jpeg',
     tags: ['Work in progress'],
     link: '/research/digital-literacy',
+    journal: undefined,
+    authors: 'Ella Henninger, Sara Lee',
+    date: '2025-08-01',
   },
   {
     id: '7',
@@ -73,6 +95,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_joburg.jpeg',
     tags: ['Policy brief'],
     link: '/research/urban-mobility',
+    journal: undefined,
+    authors: 'Ella Henninger, David Green',
+    date: '2025-07-01',
   },
   {
     id: '8',
@@ -82,6 +107,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_pollution havens1.jpeg',
     tags: ['Publication'],
     link: '/research/renewable-energy',
+    journal: 'Energy Policy',
+    authors: 'Ella Henninger, Fatima Noor',
+    date: '2022-11-20',
   },
   {
     id: '9',
@@ -91,6 +119,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_pollution havens2.jpeg',
     tags: ['Work in progress'],
     link: '/research/water-security',
+    journal: undefined,
+    authors: 'Ella Henninger, Omar Farouk',
+    date: '2025-06-01',
   },
   {
     id: '10',
@@ -100,6 +131,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_persistent inequalities.jpeg',
     tags: ['Policy brief'],
     link: '/research/food-systems',
+    journal: undefined,
+    authors: 'Ella Henninger, Maria Lopez',
+    date: '2025-05-01',
   },
   {
     id: '11',
@@ -109,6 +143,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_qual paper.png',
     tags: ['Publication'],
     link: '/research/smart-cities',
+    journal: 'Smart Cities Review',
+    authors: 'Ella Henninger, Tom Brown',
+    date: '2023-03-15',
   },
   {
     id: '12',
@@ -118,6 +155,9 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_shifting pollution.jpeg',
     tags: ['Work in progress'],
     link: '/research/climate-adaptation',
+    journal: undefined,
+    authors: 'Ella Henninger, Lisa White',
+    date: '2025-04-01',
   },
   {
     id: '13',
@@ -127,5 +167,8 @@ export const projects: Project[] = [
     thumbnail: 'src/assets/Thumbnails/thumbnail_strong demand.png',
     tags: ['Policy brief'],
     link: '/research/public-health',
+    journal: undefined,
+    authors: 'Ella Henninger, Chen Wang',
+    date: '2025-03-01',
   }
 ];

@@ -1,7 +1,28 @@
 
 import ellaImg from '../assets/ella-henninger.jpeg';
-import cvPdf from '../assets/CV.pdf';
 import './About.css';
+
+
+const workshops = [
+  {
+    title: 'International Workshop on Environmental Policy',
+    description: 'Presented research on air pollution mitigation strategies and social inequalities.',
+    date: '2025-09-15',
+    location: 'Zurich, Switzerland',
+  },
+  {
+    title: 'Annual Conference on Social Science Methods',
+    description: 'Led a session on quantitative methods for environmental attitudes research.',
+    date: '2024-11-10',
+    location: 'Berlin, Germany',
+  },
+  {
+    title: 'Urban Sustainability Symposium',
+    description: 'Panelist discussing urban mobility and public health policy.',
+    date: '2023-06-22',
+    location: 'Amsterdam, Netherlands',
+  },
+];
 
 export default function About() {
   return (
@@ -47,6 +68,23 @@ export default function About() {
           style={{ borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
         ></iframe>
       </div>
+
+      <section style={{ maxWidth: 700, margin: '0 auto 2.5rem auto', background: '#f8f8f8', borderRadius: 8, padding: '2rem' }}>
+        <h2 style={{ marginTop: 0 }}>Workshops & Conferences</h2>
+        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+          {workshops.map((w, idx) => (
+            <li key={idx} style={{ marginBottom: '1.5rem', borderBottom: idx < workshops.length - 1 ? '1px solid #e0e0e0' : 'none', paddingBottom: '1rem' }}>
+              <div style={{ fontWeight: 600, fontSize: '1.1rem', color: '#205295' }}>{w.title}</div>
+              <div style={{ color: '#444', margin: '0.3rem 0 0.5rem 0' }}>{w.description}</div>
+              <div style={{ fontSize: '0.97rem', color: '#666' }}>
+                <span>{new Date(w.date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                {' | '}
+                <span>{w.location}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
     </section>
   );
 }
