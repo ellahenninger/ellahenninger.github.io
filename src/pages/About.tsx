@@ -1,6 +1,9 @@
 
-import ellaImg from '../assets/ella-henninger.jpeg';
+
+
+import ellaImg from '../assets/ETH-Group.jpg';
 import './About.css';
+import { useState, useCallback, useEffect } from 'react';
 
 
 const workshops = [
@@ -25,6 +28,24 @@ const workshops = [
 ];
 
 export default function About() {
+  // Modal gallery state for profile image
+  const [galleryOpen, setGalleryOpen] = useState(false);
+
+  // Open modal on image click
+  const openGallery = useCallback(() => setGalleryOpen(true), []);
+  // Close modal
+  const closeGallery = useCallback(() => setGalleryOpen(false), []);
+
+  // ESC key closes modal
+  useEffect(() => {
+    if (!galleryOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeGallery();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [galleryOpen, closeGallery]);
+
   return (
     <section className="about about-landing">
       <div className="about-connector" />
@@ -33,14 +54,28 @@ export default function About() {
           src={ellaImg}
           alt="Ella Henninger"
           className="about-profile-img"
+          style={{ cursor: 'pointer' }}
+          onClick={openGallery}
+          tabIndex={0}
+          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') openGallery(); }}
+          aria-label="Open image gallery"
         />
         <div className="about-profile-text">
+          <h2>The Group and I</h2>
           <p>
             PhD candidate at ETH Zurich who is excited about getting a better understanding of the internal and external drivers of attitudes and behaviours towards the environment and air pollution mitigation, with a specific focus on social and economic inequalities. Deeply interested in exploring those and other relevant topics with cutting-edge quantitative methods.
           </p>
         </div>
       </div>
-        {/* ...existing code... */}
+      {/* Modal Gallery for profile image */}
+      {galleryOpen && (
+        <div className="gallery-modal" onClick={closeGallery}>
+          <div className="gallery-modal-content" onClick={e => e.stopPropagation()}>
+            <img src={ellaImg} alt="Ella Henninger large" className="gallery-modal-img" />
+            <button className="gallery-modal-close" onClick={closeGallery} aria-label="Close gallery">&times;</button>
+          </div>
+        </div>
+      )}
       <div className="about-video-section">
         <div className="about-video-flex">
           <div className="about-video-text">
@@ -50,9 +85,9 @@ export default function About() {
             </p>
           </div>
           <iframe
-            width="360"
-            height="203"
-            src="https://www.youtube.com/embed/LByztVHYzls"
+            width="480"
+            height="270"
+            src="https://www.youtube.com/embed/LByztVHYzls?autoplay=1&mute=1&cc_load_policy=1"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -95,6 +130,10 @@ export default function About() {
             <div className="about-contact-email">
               <span>email</span><br />
               <a href="mailto:ella.henninger@ir.gess.ethz.ch">ella.henninger@ir.gess.ethz.ch</a>
+            </div>
+            <div className="about-contact-eth-profile">
+              <span>profile</span><br />
+              <a href="https://ib.ethz.ch/people/ella-henninger.html" target="_blank" rel="noopener noreferrer">ETH Zürich Profile</a>
             </div>
           </div>
         </div>

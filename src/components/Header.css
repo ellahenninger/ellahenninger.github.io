@@ -31,6 +31,17 @@
   border: 1.5px solid #e3eafc;
   box-shadow: 0 2px 8px rgba(32,82,149,0.04);
   align-items: center;
+  position: relative;
+  min-width: 220px;
+}
+.nav-scope {
+  position: absolute;
+  top: 4px;
+  height: calc(100% - 8px);
+  background: #e3eafc;
+  border-radius: 1.5rem;
+  z-index: 0;
+  pointer-events: none;
 }
 .nav-list li {
   display: flex;
