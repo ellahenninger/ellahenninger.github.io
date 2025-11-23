@@ -26,57 +26,48 @@ const workshops = [
 
 export default function About() {
   return (
-    <section className="about">
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'stretch',
-          gap: '2.5rem',
-          marginBottom: '2.5rem',
-          flexWrap: 'nowrap',
-        }}
-      >
+    <section className="about about-landing">
+      <div className="about-connector" />
+      <div className="about-profile-card">
         <img
           src={ellaImg}
           alt="Ella Henninger"
-          style={{
-            maxWidth: '180px',
-            height: '100%',
-            borderRadius: '50%',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-            flexShrink: 0,
-            objectFit: 'cover',
-            alignSelf: 'stretch',
-          }}
+          className="about-profile-img"
         />
-        <div style={{ minWidth: 0, textAlign: 'left', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <h1 style={{ textAlign: 'left' }}>About</h1>
-          <p style={{ textAlign: 'left' }}>
+        <div className="about-profile-text">
+          <p>
             PhD candidate at ETH Zurich who is excited about getting a better understanding of the internal and external drivers of attitudes and behaviours towards the environment and air pollution mitigation, with a specific focus on social and economic inequalities. Deeply interested in exploring those and other relevant topics with cutting-edge quantitative methods.
           </p>
         </div>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-        <iframe
-          width="360"
-          height="203"
-          src="https://www.youtube.com/embed/LByztVHYzls"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          style={{ borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
-        ></iframe>
+        {/* ...existing code... */}
+      <div className="about-video-section">
+        <div className="about-video-flex">
+          <div className="about-video-text">
+            <h2>Featured Video</h2>
+            <p>
+              Watch Ella discuss her research on environmental policy, social inequalities, and the importance of quantitative methods in understanding complex societal challenges.
+            </p>
+          </div>
+          <iframe
+            width="360"
+            height="203"
+            src="https://www.youtube.com/embed/LByztVHYzls"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
-
-      <section style={{ maxWidth: 700, margin: '0 auto 2.5rem auto', background: '#f8f8f8', borderRadius: 8, padding: '2rem' }}>
-        <h2 style={{ marginTop: 0 }}>Workshops & Conferences</h2>
-        <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+      <section className="about-workshops">
+        <h2>Workshops & Conferences</h2>
+        <ul>
           {workshops.map((w, idx) => (
-            <li key={idx} style={{ marginBottom: '1.5rem', borderBottom: idx < workshops.length - 1 ? '1px solid #e0e0e0' : 'none', paddingBottom: '1rem' }}>
-              <div style={{ fontWeight: 600, fontSize: '1.1rem', color: '#205295' }}>{w.title}</div>
-              <div style={{ color: '#444', margin: '0.3rem 0 0.5rem 0' }}>{w.description}</div>
-              <div style={{ fontSize: '0.97rem', color: '#666' }}>
+            <li key={idx} className="about-workshop-item">
+              <div className="about-workshop-title">{w.title}</div>
+              <div className="about-workshop-desc">{w.description}</div>
+              <div className="about-workshop-meta">
                 <span>{new Date(w.date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}</span>
                 {' | '}
                 <span>{w.location}</span>
@@ -85,6 +76,29 @@ export default function About() {
           ))}
         </ul>
       </section>
+      <div className="about-contact-card">
+        <h2>Contact</h2>
+        <div className="about-contact-flex">
+          <address className="about-contact-address">
+            <strong>ETH Zürich</strong><br />
+            Internat. Beziehungen, Bernauer<br />
+            IFW C 40.5<br />
+            Haldeneggsteig 4<br />
+            8092 Zürich<br />
+            Switzerland<br />
+          </address>
+          <div className="about-contact-details">
+            <div className="about-contact-phone">
+              <span>phone</span><br />
+              <a href="tel:+41446326374">+41 44 632 63 74</a>
+            </div>
+            <div className="about-contact-email">
+              <span>email</span><br />
+              <a href="mailto:ella.henninger@ir.gess.ethz.ch">ella.henninger@ir.gess.ethz.ch</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

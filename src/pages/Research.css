@@ -87,10 +87,14 @@
   background: #f8f8f8;
 }
 .article-info {
-  padding: 1.15rem 1.1rem 1.1rem 1.1rem;
+  padding: 1.05rem 1.1rem 1.05rem 1.1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.13rem;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  position: relative;
+  line-height: 1.28;
 }
 .article-info h2 {
   font-size: 1.18rem;
@@ -116,7 +120,10 @@
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: 0.5rem;
+  position: absolute;
+  left: 1.1rem;
+  bottom: 1.1rem;
+  margin-top: 0;
 }
 .tag {
   background: hsl(0, 0%, 13%);

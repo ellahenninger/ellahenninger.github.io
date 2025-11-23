@@ -79,12 +79,12 @@ export default function Research() {
                   <strong>Authors:</strong> {project.authors}
                 </div>
               )}
-              <p style={{color: '#444', fontSize: '0.98rem', margin: '0 0 0.5rem 0'}}>{project.description}</p>
               {project.journal && (
                 <div style={{ fontSize: '0.95rem', color: '#205295', marginBottom: '0.3rem' }}>
                   <strong>Journal:</strong> {project.journal}
                 </div>
               )}
+              <p style={{color: '#444', fontSize: '0.98rem', margin: '0 0 0.5rem 0'}}>{project.description}</p>
               <div className="tags">
                 {project.tags.map(tag => (
                   <span className="tag" key={tag}>{tag}</span>

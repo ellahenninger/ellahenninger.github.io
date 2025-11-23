@@ -1,9 +1,10 @@
 .home-landing {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background: linear-gradient(120deg, #e3eafc 0%, #f8f8f8 100%);
+  padding-top: 3.5rem;
 }
 
 .hero-bg {
@@ -13,7 +14,7 @@
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(32,82,149,0.08);
-  padding: 2.5rem 2rem;
+  padding: 1.3rem 1.1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +23,7 @@
 .hero-content {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.3rem;
   flex-wrap: wrap;
   justify-content: center;
 }
