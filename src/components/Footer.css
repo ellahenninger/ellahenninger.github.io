@@ -1,5 +1,5 @@
 .footer {
-  background: #272727;
+  /* background: #272727; */
   border-top: 1px solid #e5e7eb;
   padding: 1rem 0;
   text-align: center;
@@ -13,14 +13,44 @@
 
 .footer-content svg {
   vertical-align: middle;
-  transition: color 0.2s;
+  width: 28px;
+  height: 28px;
+  transition: filter 0.2s, fill 0.2s;
+  display: inline-block;
 }
 .footer-content a {
-  color: #cdcdcd;
   opacity: 0.85;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, filter 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  background: none;
+  margin: 0 2px;
 }
 .footer-content a:hover {
   opacity: 1;
-  color: #ffffff;
+  background: none;
+  filter: none;
+}
+
+.footer-social-icon, .footer-content img, .footer-content svg {
+  width: 28px !important;
+  height: 28px !important;
+  filter: grayscale(100%) brightness(0.3);
+  transition: filter 0.2s;
+  display: inline-block;
+}
+.footer-content img[alt="ORCID"] {
+  filter: none !important;
+}
+.footer-content a:hover .footer-social-icon,
+.footer-content a:hover img,
+.footer-content a:hover svg {
+  filter: grayscale(0%) brightness(0.05);
+}
+.footer-content a:hover img[alt="ORCID"] {
+  filter: none !important;
 }

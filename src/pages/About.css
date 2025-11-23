@@ -6,10 +6,10 @@
   margin-right: auto;
   margin-top: 2.2rem;
   margin-bottom: 2.5rem;
-  background: #f8f8f8;
-  border-radius: 14px;
-  border: 1px solid #dfdfdf;
-  box-shadow: 0 4px 24px rgba(32,82,149,0.08);
+    background: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
   position: relative;
   z-index: 1;
   display: flex;
@@ -99,7 +99,7 @@
   transform: translateX(-50%);
   width: 4px;
   height: calc(100% - 320px);
-  background: linear-gradient(to bottom, #e3eafc 0%, #b6c9f5 100%);
+  /* background: linear-gradient(to bottom, #e3eafc 0%, #b6c9f5 100%); */
   z-index: 0;
   border-radius: 2px;
   pointer-events: none;
@@ -108,22 +108,22 @@
   display: flex;
   align-items: center;
   gap: 4rem;
-  background: #f8f8f8;
-  border-radius: 14px;
-  border: 1px solid #dfdfdf;
-  box-shadow: 0 4px 24px rgba(32,82,149,0.08);
+    background: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
   padding: 2.5rem 2rem;
   margin: 2.5rem auto 0 auto;
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
   position: relative;
   z-index: 1;
 }
 .about-profile-img {
-  width: 440px;
+  width: 560px;
   border-radius: 18px;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: none;
   flex-shrink: 0;
 }
 .about-profile-text {
@@ -153,12 +153,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 2.2rem;
-  background: #f8f8f8;
-  border-radius: 14px;
-  border: 1px solid #dfdfdf;
-  box-shadow: 0 4px 24px rgba(32,82,149,0.08);
+    background: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
   padding: 2rem 2.2rem;
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
   margin-top: 0;
   position: relative;
@@ -181,20 +181,20 @@
   font-size: 1.18rem;
 }
 .about-video-flex iframe {
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  min-width: 320px;
-  min-height: 180px;
+  border-radius: 14px;
+  box-shadow: none;
+  min-width: 560px;
+  min-height: 315px;
   max-width: 100%;
   aspect-ratio: 16/9;
 }
 .about-workshops {
-  max-width: 900px;
+  max-width: 800px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2.2rem;
-  margin-bottom: 2.5rem;
+    background: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
   background: #f8f8f8;
   border-radius: 14px;
   border: 1px solid #dfdfdf;
@@ -219,7 +219,7 @@
 }
 .about-workshop-item {
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: none;
   padding-bottom: 1rem;
 }
 .about-workshop-item:last-child {

@@ -63,7 +63,7 @@ export default function About() {
         <div className="about-profile-text">
           <h2>The Group and I</h2>
           <p>
-            PhD candidate at ETH Zurich who is excited about getting a better understanding of the internal and external drivers of attitudes and behaviours towards the environment and air pollution mitigation, with a specific focus on social and economic inequalities. Deeply interested in exploring those and other relevant topics with cutting-edge quantitative methods.
+            PhD candidate at ETH Zurich studying how internal and external factors shape attitudes and behaviours toward the environment and air pollution mitigation, with a focus on social and economic inequalities. Interested in investigating these topics using advanced quantitative methods.
           </p>
         </div>
       </div>
