@@ -142,6 +142,27 @@ export default function About() {
             </div>
           </div>
         </div>
+        <div className="about-map-wrapper" style={{ marginTop: '5.5rem', textAlign: 'center', display: 'flex', justifyContent: 'center' }}>
+          <iframe
+            title="ETH Zürich Map"
+            width="900"
+            height="320"
+            frameBorder="0"
+            className="about-map-iframe"
+            style={{ border: 0, borderRadius: 14, transition: 'filter 0.4s' }}
+            src="https://www.google.com/maps?q=Haldeneggsteig+4,+8092+Zürich&output=embed"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <style>{`
+          .about-map-iframe {
+            filter: grayscale(100%);
+            transition: filter 0.4s;
+          }
+          .about-map-wrapper:hover .about-map-iframe {
+            filter: none;
+          }
+        `}</style>
       </div>
     </section>
   );
