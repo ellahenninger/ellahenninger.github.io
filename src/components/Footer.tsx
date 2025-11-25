@@ -5,22 +5,51 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '0.5rem' }}>
-          <a href="https://github.com/ellahenninger" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/ellahenninger" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="GitHub">
             <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.606-2.665-.304-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.984-.399 3.003-.404 1.018.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.804 5.625-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z" /></svg>
           </a>
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.75 20h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76 0-.97.78-1.76 1.75-1.76s1.75.79 1.75 1.76c0 .97-.78 1.76-1.75 1.76zm15.25 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></svg>
+          <a href="https://www.linkedin.com/in/ella-h-16b672226" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-tooltip="LinkedIn">
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+              width="24"
+              height="24"
+              alt="LinkedIn"
+            />
           </a>
-          <a href="https://scholar.google.com/citations?hl=en&user=MXXBKtsAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 48 48"><path d="M24 4L6 44h36L24 4zm0 7.7L37.2 42H10.8L24 11.7zm0 7.6c-2.6 0-4.7 2.1-4.7 4.7s2.1 4.7 4.7 4.7 4.7-2.1 4.7-4.7-2.1-4.7-4.7-4.7zm0 2c1.5 0 2.7 1.2 2.7 2.7s-1.2 2.7-2.7 2.7-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7z" /></svg>
+          <a
+            href="https://scholar.google.com/citations?user=R27JOScAAAAJ&hl=en&oi=ao"
+            target="_blank"
+            rel="noopener"
+            aria-label="Google Scholar"
+            className="footer-social-link"
+            data-tooltip="Google Scholar"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg"
+              alt="Google Scholar"
+              className="footer-social-icon"
+              style={{
+                width: "32px",
+                height: "32px",
+                filter:
+                  "invert(13%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)",
+              }}
+            />
           </a>
-          <a href="https://ib.ethz.ch/people/ella-henninger.html" target="_blank" rel="noopener noreferrer" aria-label="ETH">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 48 48"><rect x="6" y="20" width="36" height="8" rx="2" /><rect x="18" y="12" width="12" height="24" rx="2" /></svg>
-          </a>
-          <a href="https://orcid.org/0000-0001-5524-641X" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8.994 7.707h1.463v8.586H8.994zm.732-2.02c.51 0 .924.414.924.924a.924.924 0 1 1-1.848 0c0-.51.414-.924.924-.924zm2.62 2.02h2.36c2.02 0 3.28 1.26 3.28 3.08 0 1.82-1.26 3.08-3.28 3.08h-1.06v2.428h-1.3zm1.3 1.18v3.8h1.06c1.32 0 2.08-.7 2.08-1.9 0-1.2-.76-1.9-2.08-1.9zm-1.646-6.887c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22.08c-5.573 0-10.08-4.507-10.08-10.08s4.507-10.08 10.08-10.08 10.08 4.507 10.08 10.08-4.507 10.08-10.08 10.08z" /></svg>
+
+          <a href="https://orcid.org/0000-0001-5524-641X" target="_blank" rel="noopener noreferrer" aria-label="ORCID" data-tooltip="ORCiD">
+            <img
+              src="https://orcid.org/assets/vectors/orcid.logo.icon.svg"
+              width="24"
+              height="24"
+              alt="ORCID"
+            />
           </a>
         </div>
+
+        <div className="site-title footer-logo" style={{ marginBottom: '0.7rem', textAlign: 'center' }}>Ella Henninger</div>
+
+
         <div>
           &copy; {new Date().getFullYear()} Ella Henninger. All rights reserved.
         </div>

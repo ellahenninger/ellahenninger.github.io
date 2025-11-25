@@ -1,3 +1,31 @@
+/* Responsive header menu */
+@media (max-width: 700px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 1.1rem;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.7rem 0.5rem;
+    border-radius: 1.2rem;
+    width: 100%;
+    background: #f5f5f7;
+    box-shadow: 0 2px 8px rgba(32,82,149,0.04);
+    margin: 0.5rem 0 0 0;
+    position: static;
+  }
+  .nav-list > li {
+    /* width: 100%; */
+    text-align: center;
+    margin: 0.1rem 0;
+  }
+  .nav-scope {
+    display: none;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 .header {
   padding: 1rem 0;
   margin-bottom: 2rem;
@@ -15,10 +43,16 @@
 }
 .site-title {
   font-size: 1.7rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #1a1a1a;
   text-align: center;
   margin-bottom: 0.2rem;
+  font-family: 'Merriweather', serif;
+  text-decoration: none;
+  transition: font-weight 0.18s;
+}
+.site-title:hover, .site-title:focus {
+  color: #222222;
 }
 .nav-list {
   list-style: none;
@@ -31,6 +65,17 @@
   border: 1.5px solid #e3eafc;
   box-shadow: 0 2px 8px rgba(32,82,149,0.04);
   align-items: center;
+  position: relative;
+  min-width: 220px;
+}
+.nav-scope {
+  position: absolute;
+  top: 4px;
+  height: calc(100% - 8px);
+  background: #e3eafc;
+  border-radius: 1.5rem;
+  z-index: 0;
+  pointer-events: none;
 }
 .nav-list li {
   display: flex;

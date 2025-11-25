@@ -91,20 +91,26 @@ export default function ArticlePage() {
         <strong>Abstract:</strong>
         <p>{project.abstract}</p>
       </div>
-      <div className="article-images">
-        {images.map((img, idx) => (
-          <img
-            key={idx}
-            src={img}
-            alt={project.title + ' image ' + (idx + 1)}
-            className="article-image"
-            style={{ cursor: 'pointer' }}
-            onClick={() => openGallery(idx)}
-            tabIndex={0}
-            onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') openGallery(idx); }}
-            aria-label="Open image gallery"
-          />
-        ))}
+      <div className="article-details-row">
+        <div className="article-images">
+          {images.map((img, idx) => (
+            <img
+              key={idx}
+              src={img}
+              alt={project.title + ' image ' + (idx + 1)}
+              className="article-image"
+              style={{ cursor: 'pointer' }}
+              onClick={() => openGallery(idx)}
+              tabIndex={0}
+              onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') openGallery(idx); }}
+              aria-label="Open image gallery"
+            />
+          ))}
+        </div>
+        <div className="article-content">
+          <h2>More Information</h2>
+          <p>Room for more text, figures, and details about the article or project. You can expand this section as needed.</p>
+        </div>
       </div>
 
       {/* Modal Gallery */}
@@ -116,10 +122,6 @@ export default function ArticlePage() {
           </div>
         </div>
       )}
-      <div className="article-content">
-        <h2>More Information</h2>
-        <p>Room for more text, figures, and details about the article or project. You can expand this section as needed.</p>
-      </div>
     </div>
   );
 }

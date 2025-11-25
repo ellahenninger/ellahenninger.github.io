@@ -80,7 +80,7 @@ export default function Research() {
                 </div>
               )}
               {project.journal && (
-                <div style={{ fontSize: '0.95rem', color: '#205295', marginBottom: '0.3rem' }}>
+                <div style={{ fontSize: '0.8rem', color: '#333', marginBottom: '0.3rem' }}>
                   <strong>Journal:</strong> {project.journal}
                 </div>
               )}

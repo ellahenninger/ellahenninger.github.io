@@ -1,7 +1,35 @@
+/* Custom tooltip for footer social icons (only tooltip, no native title) */
+.footer-content a[data-tooltip] {
+  position: relative;
+}
+.footer-content a[data-tooltip]:hover::after,
+.footer-content a[data-tooltip]:focus::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: 120%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 0.32em 0.8em;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.98rem;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  transition: opacity 0.18s;
+}
+.footer-content a[data-tooltip]::after {
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+}
 .footer {
-  background: #272727;
+  /* background: #272727; */
   border-top: 1px solid #e5e7eb;
-  padding: 1rem 0;
+  padding: 4rem 0;
   text-align: center;
   color: #888;
   font-size: 0.95rem;
@@ -9,18 +37,51 @@
 .footer-content {
   max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .footer-content svg {
   vertical-align: middle;
-  transition: color 0.2s;
+  width: 28px;
+  height: 28px;
+  transition: filter 0.2s, fill 0.2s;
+  display: inline-block;
 }
 .footer-content a {
-  color: #cdcdcd;
   opacity: 0.85;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, filter 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  background: none;
+  margin: 0 2px;
 }
 .footer-content a:hover {
   opacity: 1;
-  color: #ffffff;
+  background: none;
+  filter: none;
+}
+
+.footer-social-icon, .footer-content img, .footer-content svg {
+  width: 28px !important;
+  height: 28px !important;
+  filter: grayscale(100%) brightness(0.3);
+  transition: filter 0.2s;
+  display: inline-block;
+}
+.footer-content img[alt="ORCID"] {
+  filter: none !important;
+}
+.footer-content a:hover .footer-social-icon,
+.footer-content a:hover img,
+.footer-content a:hover svg {
+  filter: grayscale(0%) brightness(0.05);
+}
+.footer-content a:hover img[alt="ORCID"] {
+  filter: none !important;
 }

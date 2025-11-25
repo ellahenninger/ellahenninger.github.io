@@ -1,6 +1,9 @@
 
-import ellaImg from '../assets/ella-henninger.jpeg';
+
+
+import ellaImg from '../assets/ETH-Group.jpg';
 import './About.css';
+import { useState, useCallback, useEffect } from 'react';
 
 
 const workshops = [
@@ -25,22 +28,58 @@ const workshops = [
 ];
 
 export default function About() {
+  // Modal gallery state for profile image
+  const [galleryOpen, setGalleryOpen] = useState(false);
+
+  // Open modal on image click
+  const openGallery = useCallback(() => setGalleryOpen(true), []);
+  // Close modal
+  const closeGallery = useCallback(() => setGalleryOpen(false), []);
+
+  // ESC key closes modal
+  useEffect(() => {
+    if (!galleryOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeGallery();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [galleryOpen, closeGallery]);
+
   return (
     <section className="about about-landing">
-      <div className="about-connector" />
-      <div className="about-profile-card">
+      
+      <div className="about-profile-card about-profile-row">
+        
         <img
           src={ellaImg}
           alt="Ella Henninger"
           className="about-profile-img"
+          style={{ cursor: 'pointer' }}
+          onClick={openGallery}
+          tabIndex={0}
+          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') openGallery(); }}
+          aria-label="Open image gallery"
         />
-        <div className="about-profile-text">
-          <p>
-            PhD candidate at ETH Zurich who is excited about getting a better understanding of the internal and external drivers of attitudes and behaviours towards the environment and air pollution mitigation, with a specific focus on social and economic inequalities. Deeply interested in exploring those and other relevant topics with cutting-edge quantitative methods.
-          </p>
+        <div className="about-profile-text-wrapper">
+          <span className="about-vertical-separator" />
+          <div className="about-profile-text">
+            <h2>The Group and I</h2>
+            <p>
+              PhD candidate at ETH Zurich studying how internal and external factors shape attitudes and behaviours toward the environment and air pollution mitigation, with a focus on social and economic inequalities. Interested in investigating these topics using advanced quantitative methods.
+            </p>
+          </div>
         </div>
       </div>
-        {/* ...existing code... */}
+      {/* Modal Gallery for profile image */}
+      {galleryOpen && (
+        <div className="gallery-modal" onClick={closeGallery}>
+          <div className="gallery-modal-content" onClick={e => e.stopPropagation()}>
+            <img src={ellaImg} alt="Ella Henninger large" className="gallery-modal-img" />
+            <button className="gallery-modal-close" onClick={closeGallery} aria-label="Close gallery">&times;</button>
+          </div>
+        </div>
+      )}
       <div className="about-video-section">
         <div className="about-video-flex">
           <div className="about-video-text">
@@ -49,10 +88,11 @@ export default function About() {
               Watch Ella discuss her research on environmental policy, social inequalities, and the importance of quantitative methods in understanding complex societal challenges.
             </p>
           </div>
+          <span className="about-vertical-separator" />
           <iframe
-            width="360"
-            height="203"
-            src="https://www.youtube.com/embed/LByztVHYzls"
+            width="480"
+            height="270"
+            src="https://www.youtube.com/embed/LByztVHYzls?autoplay=1&mute=1&cc_load_policy=1"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -96,8 +136,33 @@ export default function About() {
               <span>email</span><br />
               <a href="mailto:ella.henninger@ir.gess.ethz.ch">ella.henninger@ir.gess.ethz.ch</a>
             </div>
+            <div className="about-contact-eth-profile">
+              <span>profile</span><br />
+              <a href="https://ib.ethz.ch/people/ella-henninger.html" target="_blank" rel="noopener noreferrer">ETH Zürich Profile</a>
+            </div>
           </div>
         </div>
+        <div className="about-map-wrapper" style={{ marginTop: '5.5rem', textAlign: 'center', display: 'flex', justifyContent: 'center' }}>
+          <iframe
+            title="ETH Zürich Map"
+            width="900"
+            height="320"
+            frameBorder="0"
+            className="about-map-iframe"
+            style={{ border: 0, borderRadius: 14, transition: 'filter 0.4s' }}
+            src="https://www.google.com/maps?q=Haldeneggsteig+4,+8092+Zürich&output=embed"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <style>{`
+          .about-map-iframe {
+            filter: grayscale(100%);
+            transition: filter 0.4s;
+          }
+          .about-map-wrapper:hover .about-map-iframe {
+            filter: none;
+          }
+        `}</style>
       </div>
     </section>
   );
