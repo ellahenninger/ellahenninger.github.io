@@ -1,6 +1,7 @@
 .about-profile-text h2 {
   margin-bottom: 0.0rem !important;
 }
+
 @media (max-width: 700px) {
   .about-video-flex iframe {
     width: 92vw !important;
@@ -11,7 +12,9 @@
     box-sizing: border-box !important;
   }
 }
+
 @media (max-width: 700px) {
+
   .about-profile-img,
   .about-video-flex iframe {
     width: 100% !important;
@@ -22,7 +25,9 @@
     box-sizing: border-box !important;
   }
 }
+
 @media (max-width: 700px) {
+
   .about-profile-row,
   .about-profile-text-wrapper,
   .about-video-flex {
@@ -31,6 +36,7 @@
     width: 100% !important;
     gap: 1.2rem !important;
   }
+
   .about-profile-img,
   .about-video-flex iframe {
     width: 100vw !important;
@@ -39,9 +45,11 @@
     margin: 0 auto 1.2rem auto !important;
     display: block !important;
   }
+
   .about-vertical-separator {
     display: none !important;
   }
+
   .about-workshops,
   .about-contact-card {
     padding: 1.2rem 0.7rem !important;
@@ -50,12 +58,14 @@
     width: 100% !important;
   }
 }
+
 @media (max-width: 700px) {
   .about-profile-row {
     flex-direction: column;
     align-items: stretch;
     gap: 1.2rem;
   }
+
   .about-profile-img {
     width: 98vw;
     max-width: 340px;
@@ -63,41 +73,50 @@
     margin: 0 auto 1.2rem auto;
     display: block;
   }
+
   .about-profile-text-wrapper {
     flex-direction: column;
     gap: 0.7rem;
     align-items: stretch;
   }
+
   .about-video-flex {
     flex-direction: column;
     align-items: stretch;
     gap: 1.2rem;
   }
+
   .about-vertical-separator {
     display: none;
   }
+
   .about-workshops {
     padding: 1.2rem 0.7rem;
   }
+
   .about-contact-card {
     margin-top: 2rem;
     margin-bottom: 1.2rem;
     padding: 1.2rem 0.7rem;
   }
 }
+
 .about-contact-card {
   margin-top: 3.5rem;
   margin-bottom: 2.5rem;
 }
+
 .about-video-flex iframe {
   filter: grayscale(1);
   border-radius: 14px;
   transition: filter 0.3s;
 }
+
 .about-video-flex iframe:hover,
 .about-video-flex iframe:focus {
   filter: grayscale(0);
 }
+
 .about-profile-text h2,
 .about-video-text h2,
 .about-workshops h2,
@@ -107,24 +126,28 @@
   color: #222;
   margin-bottom: 1.2rem;
 }
+
 .about-vertical-separator {
   display: block;
   width: 3px;
   min-height: 180px;
   background: #eeeeee;
   border-radius: 2px;
-  margin: 0 2.2rem;
+  margin: 0 2.4rem;
   align-self: stretch;
 }
+
 .about-profile-row {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2.5rem;
 }
+
 .about-profile-row .about-profile-img {
   margin-right: 0;
 }
+
 .about-profile-row .about-profile-text-wrapper {
   display: flex;
   flex-direction: row;
@@ -245,6 +268,7 @@
   filter: grayscale(1);
   transition: filter 0.3s;
 }
+
 .about-profile-img:hover,
 .about-profile-img:focus {
   filter: grayscale(0);
@@ -318,7 +342,7 @@
 }
 
 .about-workshops {
-  max-width: 800px;
+  /* max-width: 800px; */
   width: 100%;
   background: none;
   border-radius: 0;
