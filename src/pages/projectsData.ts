@@ -152,7 +152,7 @@ export const projects: Project[] = [
     title: '(Un)fair to Me - (Un)fair to You? Distributional Implications of Policies and Their Effect on Policy Support',
     description: 'Paper project on how different distributional policy designs shape fairness perceptions and support in Delhi and Jakarta.',
     abstract: '',
-    thumbnail: 'src/assets/Thumbnails/thumbnail_fairness.jpeg',
+    thumbnail: 'src/assets/Thumbnails/thumbnail_fairness.png',
     tags: ['Work in progress'],
     link: '/research/fairness',
     journal: undefined,
