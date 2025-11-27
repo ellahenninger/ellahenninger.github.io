@@ -21,7 +21,7 @@ const workshops = [
   },
   {
     title: 'Environmental Politics and Governance Conference',
-    description: 'Panelist discussing urban mobility and public health policy.',
+    description: 'Paper presentation',
     date: '2025-06-10',
     location: 'Sachseln, Switzerland',
   },
