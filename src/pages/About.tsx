@@ -8,22 +8,22 @@ import { useState, useCallback, useEffect } from 'react';
 
 const workshops = [
   {
-    title: 'International Workshop on Environmental Policy',
-    description: 'Presented research on air pollution mitigation strategies and social inequalities.',
-    date: '2025-09-15',
-    location: 'Zurich, Switzerland',
+    title: 'Climate Change, Inequality, and Policy Contestation',
+    description: 'Paper presentation',
+    date: '2025-11-10',
+    location: 'LSE, London, UK',
   },
   {
-    title: 'Annual Conference on Social Science Methods',
-    description: 'Led a session on quantitative methods for environmental attitudes research.',
-    date: '2024-11-10',
-    location: 'Berlin, Germany',
+    title: 'European Consortium of Political Research (ECPR) General Conference',
+    description: 'Paper presentation',
+    date: '2025-08-26',
+    location: 'Thessaloniki, Greece',
   },
   {
-    title: 'Urban Sustainability Symposium',
+    title: 'Environmental Politics and Governance Conference',
     description: 'Panelist discussing urban mobility and public health policy.',
-    date: '2023-06-22',
-    location: 'Amsterdam, Netherlands',
+    date: '2025-06-10',
+    location: 'Sachseln, Switzerland',
   },
 ];
 
@@ -66,7 +66,7 @@ export default function About() {
           <div className="about-profile-text">
             <h2>The Group and I</h2>
             <p>
-              PhD candidate at ETH Zurich studying how internal and external factors shape attitudes and behaviours toward the environment and air pollution mitigation, with a focus on social and economic inequalities. Interested in investigating these topics using advanced quantitative methods.
+              My research interests center on how environmental governance takes shape and how citizens respond to it. I examine which actors influence pollution mitigation across different contexts, assessing their incentives and capacities through qualitative and mixed methods. I also study public opinion on environmental policy support and responsibility allocation, with a focus on how trust shapes support and perceptions of who should address pollution and who is capable of doing so, using quantitative (experimental) methods. In addition, my work investigates the political and attitudinal consequences of environmental stress, using variation in air pollution as a subtle but chronic shock to understand how everyday exposure affects views and behaviour.
             </p>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function About() {
           <div className="about-video-text">
             <h2>Featured Video</h2>
             <p>
-              Watch Ella discuss her research on environmental policy, social inequalities, and the importance of quantitative methods in understanding complex societal challenges.
+              As part of the final workshop of the project "Designing Environmentally Effective and Politically Feasible Policies for Cleaner Urban Air in the Global South", my colleague E. Keith Smith and I summarise our key research findings.
             </p>
           </div>
           <span className="about-vertical-separator" />

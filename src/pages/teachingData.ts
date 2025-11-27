@@ -8,29 +8,29 @@ export interface TeachingClass {
 
 export const teachingClasses: TeachingClass[] = [
   {
-    title: "Urban Policy Analysis",
-    term: "Spring 2025",
-    institution: "University of Example",
-    description: "Graduate seminar on methods and frameworks for analyzing urban policy, with a focus on environmental and social outcomes.",
+    title: "Introduction to Political Science",
+    term: "Fall 2025",
+    institution: "ETH Zurich",
+    description: "Introductory lecture to political science, spanning political institutions, behaviour, and policy-making processes.",
     link: "#"
   },
   {
-    title: "Environmental Justice",
-    term: "Fall 2024",
-    institution: "University of Example",
-    description: "Undergraduate course exploring the intersection of environment, race, and inequality in global cities.",
+    title: "Proseminar",
+    term: "Fall 2024, Spring 2025",
+    institution: "ETH Zurich",
+    description: "Undergraduate course on research design and academic writing in political science.",
     link: "#"
   },
   {
-    title: "Quantitative Methods for Social Science",
-    term: "Spring 2024",
-    institution: "University of Example",
-    description: "Core course on quantitative research design, data analysis, and interpretation for social science students."
+    title: "Teaching Assistance: Methods II, Research Unit Comparative Public Policy-Analysis and Empirical Methods",
+    term: "Spring 2021",
+    institution: "University of Münster",
+    description: "Three weekly tutorials on various empirical methods and government activity."
   },
   {
-    title: "Introduction to Urban Studies",
-    term: "Fall 2023",
-    institution: "University of Example",
-    description: "Introductory course covering the fundamentals of urbanization, city planning, and urban social theory."
+    title: "Teaching Assistance: Statistics, Unit Emperical Methods",
+    term: "Fall 2020",
+    institution: "University of Münster",
+    description: "Two weekly tutorials on OLS regression and maximum likelihood estimation."
   }
 ];
