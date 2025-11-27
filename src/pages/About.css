@@ -203,7 +203,6 @@
   margin-left: 14rem;
 }
 
-.about-contact-phone span,
 .about-contact-email span {
   color: #222222;
   font-size: 1.01rem;
@@ -233,6 +232,7 @@
 .about-contact-card h2 {
   margin-top: 0;
   margin-bottom: 1.2rem;
+  width: 950px;
 }
 
 .about-contact-card address {
@@ -258,17 +258,6 @@
 }
 
 
-
-.about-profile-img {
-  width: 560px;
-  border-radius: 18px;
-  object-fit: cover;
-  box-shadow: none;
-  flex-shrink: 0;
-  filter: grayscale(1);
-  transition: filter 0.3s;
-}
-
 .about-profile-img:hover,
 .about-profile-img:focus {
   filter: grayscale(0);
@@ -276,7 +265,7 @@
 
 .about-profile-text {
   text-align: left;
-  max-width: 480px;
+  max-width: 1000px;
 }
 
 .about-profile-text h1 {
@@ -342,7 +331,7 @@
 }
 
 .about-workshops {
-  /* max-width: 800px; */
+  max-width: 950px;
   width: 100%;
   background: none;
   border-radius: 0;

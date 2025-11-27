@@ -1,9 +1,8 @@
 
 
 
-import ellaImg from '../assets/ETH-Group.jpg';
 import './About.css';
-import { useState, useCallback, useEffect } from 'react';
+
 
 
 const workshops = [
@@ -28,62 +27,24 @@ const workshops = [
 ];
 
 export default function About() {
-  // Modal gallery state for profile image
-  const [galleryOpen, setGalleryOpen] = useState(false);
-
-  // Open modal on image click
-  const openGallery = useCallback(() => setGalleryOpen(true), []);
-  // Close modal
-  const closeGallery = useCallback(() => setGalleryOpen(false), []);
-
-  // ESC key closes modal
-  useEffect(() => {
-    if (!galleryOpen) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeGallery();
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [galleryOpen, closeGallery]);
 
   return (
     <section className="about about-landing">
-      
+
       <div className="about-profile-card about-profile-row">
-        
-        <img
-          src={ellaImg}
-          alt="Ella Henninger"
-          className="about-profile-img"
-          style={{ cursor: 'pointer' }}
-          onClick={openGallery}
-          tabIndex={0}
-          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') openGallery(); }}
-          aria-label="Open image gallery"
-        />
         <div className="about-profile-text-wrapper">
-          <span className="about-vertical-separator" />
           <div className="about-profile-text">
-            <h2>The Group and I</h2>
+            <h2>My Research</h2>
             <p>
               My research interests center on how environmental governance takes shape and how citizens respond to it. I examine which actors influence pollution mitigation across different contexts, assessing their incentives and capacities through qualitative and mixed methods. I also study public opinion on environmental policy support and responsibility allocation, with a focus on how trust shapes support and perceptions of who should address pollution and who is capable of doing so, using quantitative (experimental) methods. In addition, my work investigates the political and attitudinal consequences of environmental stress, using variation in air pollution as a subtle but chronic shock to understand how everyday exposure affects views and behaviour.
             </p>
           </div>
         </div>
       </div>
-      {/* Modal Gallery for profile image */}
-      {galleryOpen && (
-        <div className="gallery-modal" onClick={closeGallery}>
-          <div className="gallery-modal-content" onClick={e => e.stopPropagation()}>
-            <img src={ellaImg} alt="Ella Henninger large" className="gallery-modal-img" />
-            <button className="gallery-modal-close" onClick={closeGallery} aria-label="Close gallery">&times;</button>
-          </div>
-        </div>
-      )}
       <div className="about-video-section">
         <div className="about-video-flex">
           <div className="about-video-text">
-            <h2>Featured Video</h2>
+            <h2>Key Research Findings</h2>
             <p>
               As part of the final workshop of the project "Designing Environmentally Effective and Politically Feasible Policies for Cleaner Urban Air in the Global South", my colleague E. Keith Smith and I summarise our key research findings.
             </p>
@@ -128,10 +89,6 @@ export default function About() {
             Switzerland<br />
           </address>
           <div className="about-contact-details">
-            <div className="about-contact-phone">
-              <span>phone</span><br />
-              <a href="tel:+41446326374">+41 44 632 63 74</a>
-            </div>
             <div className="about-contact-email">
               <span>email</span><br />
               <a href="mailto:ella.henninger@ir.gess.ethz.ch">ella.henninger@ir.gess.ethz.ch</a>
@@ -145,7 +102,7 @@ export default function About() {
         <div className="about-map-wrapper" style={{ marginTop: '5.5rem', textAlign: 'center', display: 'flex', justifyContent: 'center' }}>
           <iframe
             title="ETH Zürich Map"
-            width="900"
+            width="950"
             height="320"
             frameBorder="0"
             className="about-map-iframe"

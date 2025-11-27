@@ -1,17 +1,11 @@
 
 import { teachingClasses } from './teachingData';
 import './Teaching.css';
-import teacherInClassImg from '../assets/teaching.jpg';
 
 export default function Teaching() {
   return (
     <section className="teaching">
       <div className="teaching-main-card">
-        <img
-          src={teacherInClassImg}
-          alt="Teacher in class"
-          className="teaching-main-img"
-        />
         <div className="teaching-main-text">
           <h2>Teaching Philosophy</h2>
           <p>
