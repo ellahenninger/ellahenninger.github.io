@@ -39,16 +39,17 @@ export default function Home() {
               <h2 style={{ margin: 0 }}>Political Scientist<br />PhD Candidate at ETH Zurich</h2>
             </div>
             <p>
-              Exploring the drivers of environmental attitudes and air pollution mitigation, with a focus on social and economic inequalities. Passionate about using cutting-edge quantitative methods for impactful research.
+              Interested in the dynamics of environmental governance in the Majority World: Which stakeholders shape government agendas and whose voices carry weight where? How does political trust influences citizens’ support for environmental policies?
             </p>
           </div>
         </div>
         <div className="hero-labels-block">
           <div className="hero-labels">
-            <span className="hero-label">Environmental Attitudes</span>
-            <span className="hero-label">Air Pollution</span>
-            <span className="hero-label">Social Inequality</span>
-            <span className="hero-label">Policy Research</span>
+            <span className="hero-label">Environmental attitudes</span>
+            <span className="hero-label">Air pollution</span>
+            <span className="hero-label">Political trust</span>
+            <span className="hero-label">Majority World</span>
+            <span className="hero-label">Survey research</span>
           </div>
         </div>
       </div>
