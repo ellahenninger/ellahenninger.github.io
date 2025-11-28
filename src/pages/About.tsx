@@ -36,7 +36,7 @@ export default function About() {
           <div className="about-profile-text">
             <h2>My Research</h2>
             <p>
-              My research interests center on how environmental governance takes shape and how citizens respond to it. I examine which actors influence pollution mitigation across different contexts, assessing their incentives and capacities through qualitative and mixed methods. I also study public opinion on environmental policy support and responsibility allocation, with a focus on how trust shapes support and perceptions of who should address pollution and who is capable of doing so, using quantitative (experimental) methods. In addition, my work investigates the political and attitudinal consequences of environmental stress, using variation in air pollution as a subtle but chronic shock to understand how everyday exposure affects views and behaviour.
+              My research interests center on how environmental governance takes shape and how citizens respond to it. I examine which actors influence pollution mitigation across different contexts, assessing their incentives and capacities through qualitative and mixed methods. I also study public opinion, focusing on environmental policy support and responsibility allocation, asking how trust shapes support and perceptions of who should address pollution and who is capable of doing so, using quantitative (experimental) methods. In addition, my work investigates the political and attitudinal consequences of environmental stress, using variation in air pollution as a subtle but chronic shock to understand how everyday exposure affects government satisfaction and other political attitudes.
             </p>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function About() {
           <div className="about-video-text">
             <h2>Key Research Findings</h2>
             <p>
-              As part of the final workshop of the project "Designing Environmentally Effective and Politically Feasible Policies for Cleaner Urban Air in the Global South", my colleague E. Keith Smith and I summarise our key research findings.
+              As part of the final workshop of the project "Designing Environmentally Effective and Politically Feasible Policies for Cleaner Urban Air in the Global South", my colleague E. Keith Smith and I summarise our key research findings from extensive fieldwork across Africa and Asia, and online and in-person surveys.
             </p>
           </div>
           <span className="about-vertical-separator" />
