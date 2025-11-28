@@ -39,7 +39,7 @@ export default function Home() {
               <h2 style={{ margin: 0 }}>Political Scientist<br />PhD Candidate at ETH Zurich</h2>
             </div>
             <p>
-              Interested in the dynamics of environmental governance in the Majority World: Which stakeholders shape government agendas and whose voices carry weight where? How does political trust shape citizens’ support for environmental policies?
+              Interested in the dynamics of environmental governance in diverse contexts, exploring which stakeholders shape government agendas and whose voices carry weight where, as well as how political trust shapes citizens’ support for (environmental) policies.
             </p>
           </div>
         </div>
