@@ -39,8 +39,7 @@ export default function About() {
               My research interests center on how environmental governance takes shape and how citizens respond to it. I examine which actors influence pollution mitigation across different contexts, assessing their incentives and capacities through qualitative and mixed methods. I also study public opinion, focusing on environmental policy support and responsibility allocation, asking how trust shapes support and perceptions of who should address pollution and who is capable of doing so, using quantitative (experimental) methods. In addition, my work investigates the political and attitudinal consequences of environmental stress, using variation in air pollution as a subtle but chronic shock to understand how everyday exposure affects government satisfaction and other political attitudes.
             </p>
             <p>
-              <p>
-  My work has been published in <em>PNAS</em>, <em>PLOS Climate</em>, <em>Ecological Economics</em>, and <em>The Journal of Environment & Development</em>. I have acted as a reviewer for articles submitted to the <em>British Journal of Political Science</em>, <em>Environmental Politics</em>, <em>Global Environmental Politics</em>, and <em>Environment and Development Economics</em>.
+              My work has been published in <em>PNAS</em>, <em>PLOS Climate</em>, <em>Ecological Economics</em>, and <em>The Journal of Environment & Development</em>. I have acted as a reviewer for articles submitted to the <em>British Journal of Political Science</em>, <em>Environmental Politics</em>, <em>Global Environmental Politics</em>, and <em>Environment and Development Economics</em>.
             </p>
           </div>
         </div>
