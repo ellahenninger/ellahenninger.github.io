@@ -13,26 +13,6 @@ export default function Research() {
   // Custom tab order: Publication, Work in progress, Policy brief
   const tags: (ProjectTag | 'All')[] = ['All', 'Publication', 'Work in progress', 'Policy brief'];
 
-  // Sort projects by: Publication (date desc), Work in progress (date desc), Policy brief (date desc)
-  function sortProjects(projects: Project[]): Project[] {
-    const tagOrder: Record<ProjectTag, number> = {
-      'Publication': 0,
-      'Work in progress': 1,
-      'Policy brief': 2,
-    };
-    return [...projects].sort((a, b) => {
-      // Sort by tag order first (lowest index first)
-      const aTag = a.tags[0];
-      const bTag = b.tags[0];
-      if (tagOrder[aTag] !== tagOrder[bTag]) {
-        return tagOrder[aTag] - tagOrder[bTag];
-      }
-      // Then by date descending (most recent first)
-      const aDate = a.date ? new Date(a.date).getTime() : 0;
-      const bDate = b.date ? new Date(b.date).getTime() : 0;
-      return bDate - aDate;
-    });
-  }
 
 
   // For fade-in animation: trigger on tab change
@@ -41,11 +21,33 @@ export default function Research() {
     setFadeKey(prev => prev + 1);
   }, [selectedTag]);
 
-  const filteredProjects = sortProjects(
-    selectedTag === 'All'
+
+
+  const groupOrder: ProjectTag[] = ['Publication', 'Work in progress', 'Policy brief'];
+  const filteredProjects = (() => {
+    const base = selectedTag === 'All'
       ? projects
-      : projects.filter((project: Project) => project.tags.includes(selectedTag))
-  );
+      : projects.filter((project: Project) => project.tags.includes(selectedTag));
+    // Group and sort by tag, then concatenate for strict top-to-bottom order
+    const grouped: Record<ProjectTag, Project[]> = {
+      'Publication': [],
+      'Work in progress': [],
+      'Policy brief': [],
+    };
+    base.forEach(p => {
+      const tag = p.tags[0];
+      if (grouped[tag]) grouped[tag].push(p);
+    });
+    groupOrder.forEach(tag => {
+      grouped[tag].sort((a, b) => {
+        const aDate = a.date ? new Date(a.date).getTime() : 0;
+        const bDate = b.date ? new Date(b.date).getTime() : 0;
+        return bDate - aDate;
+      });
+    });
+    // Concatenate groups for strict order: all Publication, then Work in progress, then Policy brief
+    return groupOrder.flatMap(tag => grouped[tag]);
+  })();
 
   return (
     <section className="research" style={{ width: '100vw', maxWidth: '100vw', margin: 0, padding: 0 }}>

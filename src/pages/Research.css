@@ -58,23 +58,25 @@
   background: none;
 }
 .articles-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* gap: 0.1rem; */
+  column-count: 3;
+  column-gap: 2.2rem;
   width: 100%;
-  max-width: 100vw;
-  margin-left: 0;
-  margin-right: 0;
+  /* max-width: 1200px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  box-sizing: border-box;
 }
 
 @media (min-width: 1200px) {
   .articles-grid {
-    grid-template-columns: repeat(4, 1fr);
+    column-count: 4;
   }
 }
 .article-card {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  /* Remove flex for masonry layout */
   background: #fff;
   border-radius: 14px;
   border: 1.5px solid #e3eafc;
@@ -85,7 +87,8 @@
   overflow: hidden;
   /* min-height removed to allow card to shrink to content */
   position: relative;
-  margin: 1.2rem 1.2rem 1.8rem 1.2rem;
+  margin: 0 0 1.8rem 0;
+  break-inside: avoid;
   /* padding-bottom: 0.7rem; */
   word-break: break-word;
 }
