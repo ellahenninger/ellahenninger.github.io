@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 import { projects } from './projectsData';
@@ -62,37 +62,54 @@ export default function Research() {
         ))}
       </div>
       <div className="articles-grid">
-        {filteredProjects.map((project, idx) => (
-          <Link
-            className="article-card fadein"
-            to={project.link}
-            key={project.id + '-' + fadeKey}
-            style={{
-              animationDelay: `${0.08 * idx + 0.08}s`,
-            }}
-          >
-            <img src={project.thumbnail} alt={project.title} className="article-thumb" />
-            <div className="article-info">
-              <h2>{project.title}</h2>
-              {project.authors && (
-                <div style={{ fontSize: '0.93rem', color: '#333', margin: '0.2rem 0 0.5rem 0' }}>
-                  <strong>Authors:</strong> {project.authors}
+        {filteredProjects.map((project, idx) => {
+          const isExternal = project.link.startsWith('http');
+          const cardContent = (
+            <>
+              <img src={project.thumbnail} alt={project.title} className="article-thumb" />
+              <div className="article-info">
+                <h2>{project.title}</h2>
+                {project.authors && (
+                  <div style={{ fontSize: '0.93rem', color: '#333', margin: '0.2rem 0 0.5rem 0' }}>
+                    <strong>Authors:</strong> {project.authors}
+                  </div>
+                )}
+                {project.journal && (
+                  <div style={{ fontSize: '0.8rem', color: '#333', marginBottom: '0.3rem' }}>
+                    <strong>Journal:</strong> {project.journal}
+                  </div>
+                )}
+                <p style={{color: '#444', fontSize: '0.98rem', margin: '0 0 0.5rem 0'}}>{project.description}</p>
+                <div className="tags">
+                  {project.tags.map(tag => (
+                    <span className="tag" key={tag}>{tag}</span>
+                  ))}
                 </div>
-              )}
-              {project.journal && (
-                <div style={{ fontSize: '0.8rem', color: '#333', marginBottom: '0.3rem' }}>
-                  <strong>Journal:</strong> {project.journal}
-                </div>
-              )}
-              <p style={{color: '#444', fontSize: '0.98rem', margin: '0 0 0.5rem 0'}}>{project.description}</p>
-              <div className="tags">
-                {project.tags.map(tag => (
-                  <span className="tag" key={tag}>{tag}</span>
-                ))}
               </div>
-            </div>
-          </Link>
-        ))}
+            </>
+          );
+          return isExternal ? (
+            <a
+              className="article-card fadein"
+              href={project.link}
+              key={project.id + '-' + fadeKey}
+              style={{ animationDelay: `${0.08 * idx + 0.08}s` }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {cardContent}
+            </a>
+          ) : (
+            <Link
+              className="article-card fadein"
+              to={project.link}
+              key={project.id + '-' + fadeKey}
+              style={{ animationDelay: `${0.08 * idx + 0.08}s` }}
+            >
+              {cardContent}
+            </Link>
+          );
+        })}
       </div>
     </section>
   );
