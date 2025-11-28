@@ -11,15 +11,13 @@ export const teachingClasses: TeachingClass[] = [
     title: "Introduction to Political Science",
     term: "Fall 2025",
     institution: "ETH Zurich",
-    description: "Introductory lecture to political science, spanning political institutions, behaviour, and policy-making processes.",
-    link: "#"
+    description: "Introductory lecture to political science for bachelor students, spanning political institutions, behaviour, and policy-making processes."
   },
   {
-    title: "Proseminar",
+    title: "Proseminar: Foundations of Scientific Inquiry and Empirical Research",
     term: "Fall 2024, Spring 2025",
     institution: "ETH Zurich",
-    description: "Undergraduate course on research design and academic writing in political science.",
-    link: "#"
+    description: "Undergraduate course on research design and academic writing in political science."
   },
   {
     title: "Teaching Assistance: Methods II, Research Unit Comparative Public Policy-Analysis and Empirical Methods",
