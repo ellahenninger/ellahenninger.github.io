@@ -48,7 +48,7 @@ export const projects: Project[] = [
     tags: ['Publication'],
     link: 'https://www.mdpi.com/2073-4433/13/1/62',
     journal: "Atmosphere",
-    authors: 'Otto Klemm, Antonia Ahrens, Margarethe Arnswald, Raika Bethke, David Frederik Berger, Katharina Blankenhaus, Lisa Blauth, Bettina Breuer, Sophia Buchholz, Felix Burek, Laura Ehrnsperger, Sarah Funken, Ella Henninger, Janik Hohl, Nadine Jöllenbeck, Philipp Kirgasser, Maike Kuhls, Bastian Paas, Lea Andrea Roters, Carsten Schaller, Hanna Schlüter',
+    authors: 'Klemm et al.',
     date: '2021-12-30',
   },
   {
