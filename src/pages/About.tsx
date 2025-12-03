@@ -61,7 +61,7 @@ export default function About() {
           <div className="about-video-text">
             <h2>Key Research Findings</h2>
             <p>
-              As part of the final workshop of the project "Designing Environmentally Effective and Politically Feasible Policies for Cleaner Urban Air in the Global South", my colleague E. Keith Smith and I summarise our key research findings from extensive fieldwork across Africa and Asia, and online and in-person surveys.
+              As part of the final workshop of the project "Designing Environmentally Effective and Politically Feasible Policies for Cleaner Urban Air in the Global South", my colleague E. Keith Smith and I summarise our key research findings from extensive fieldwork, and online and in-person surveys across Africa and Asia.
             </p>
           </div>
           <span className="about-vertical-separator" />
