@@ -36,7 +36,16 @@ export default function About() {
           <div className="about-profile-text">
             <h2>My Research</h2>
             <p>
-              I am a third-year doctoral student at ETH Zurich, Switzerland in the IPEEP (International Political Economy and Environmental Politics) Group which is part of the CIS (Center for Comparative and International Studies) and the Albert Einstein School of Public Policy.
+              I am a third-year doctoral student at ETH Zurich, Switzerland in the&nbsp;
+              <a href="https://ib.ethz.ch/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 500, color: '#205295' }}>
+                IPEEP
+              </a> (International Political Economy and Environmental Politics) Group which is part of the&nbsp;
+              <a href="https://cis.ethz.ch/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 500, color: '#205295' }}>
+                CIS
+              </a> (Center for Comparative and International Studies) and the&nbsp;
+              <a href="https://einstein-school.ethz.ch/en/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 500, color: '#205295' }}>
+                Albert Einstein School of Public Policy
+              </a>.
             </p>
             <p>
               My research interests center on how environmental governance takes shape and how citizens respond to it. I examine which actors influence pollution mitigation across different contexts, assessing their incentives and capacities through qualitative and mixed methods. I also study public opinion, focusing on environmental policy support and responsibility allocation, asking how trust shapes support and perceptions of who should address pollution and who is capable of doing so, using quantitative (experimental) methods. In addition, my work investigates the political and attitudinal consequences of environmental stress, using variation in air pollution as a subtle but chronic shock to understand how everyday exposure affects government satisfaction and other political attitudes.
