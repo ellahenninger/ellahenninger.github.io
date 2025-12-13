@@ -1,6 +1,5 @@
 
 import { Link, useLocation } from 'react-router-dom';
-import cvPdf from '../assets/CV.pdf';
 import './Header.css';
 
 const navItems = [
