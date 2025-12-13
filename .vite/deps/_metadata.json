@@ -1,31 +1,31 @@
 {
-  "hash": "a7468385",
+  "hash": "f97725a9",
   "configHash": "55bee151",
-  "lockfileHash": "5d791430",
-  "browserHash": "9ef17023",
+  "lockfileHash": "93f3d867",
+  "browserHash": "76bfb814",
   "optimized": {
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "a953e4c2",
+      "fileHash": "cb5e4717",
       "needsInterop": true
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "87a7a1d3",
+      "fileHash": "298f6a93",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "6f3b9a1a",
+      "fileHash": "accad57d",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "d0f1ba11",
+      "fileHash": "1c34dd66",
       "needsInterop": false
     }
   },

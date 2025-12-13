@@ -20,7 +20,7 @@ export default function ArticlePage() {
   const date = project.date;
 
   // Prepare for multiple images in the future
-  const images = [thumbnails[project.thumbnail]].filter(Boolean);
+  const images = [project.thumbnail].filter(Boolean);
 
   // Gallery modal state
   const [galleryOpen, setGalleryOpen] = useState(false);
