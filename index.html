@@ -6,6 +6,21 @@
   <link rel="icon" type="image/png" href="/assets/Icon-CRpgMiUN.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ella Henninger</title>
+
+  <script type="text/javascript">
+    // SINGLE PAGE APPS GITHUB PAGES WORKAROUND
+    // Checks if the 404.html redirected us here with a "?p=..." query
+
+    const searchParams = new URLSearchParams(window.location.search);
+    const redirectPath = searchParams.get('p');
+
+    if (redirectPath) {
+      // If we have a redirect path, replace the current URL with it.
+      // This removes the "?p=" and puts the clean URL back in the address bar
+      // BEFORE React/Router loads.
+      window.history.replaceState(null, null, redirectPath);
+    }
+  </script>
   <script type="module" crossorigin src="/assets/index-Cevfbm-g.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-3Ruvyzpu.css">
 </head>
