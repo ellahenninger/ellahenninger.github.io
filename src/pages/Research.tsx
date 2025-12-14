@@ -48,7 +48,19 @@ export default function Research() {
   );
 
   return (
-    <section className="research" style={{ width: '100vw', maxWidth: '100vw', margin: 0, padding: 0 }}>
+    <section
+      className="research"
+      style={{
+        width: '100vw',
+        maxWidth: '100vw',
+        margin: 0,
+        paddingLeft: '5vw',
+        paddingRight: '5vw',
+        boxSizing: 'border-box',
+        paddingTop: 0,
+        paddingBottom: 0,
+      }}
+    >
       <div className="tab-bar">
         {tags.map(tag => (
           <button

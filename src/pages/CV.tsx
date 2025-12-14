@@ -11,7 +11,30 @@ function isSkillsSection(title: string) {
 export default function CVPage() {
     const sectionIds = cvSections.map(s => s.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''));
     return (
-        <div style={{ display: 'flex', flexDirection: 'row', maxWidth: 1100, margin: '0rem auto' }}>
+                <div className="cv-responsive-container" style={{ display: 'flex', flexDirection: 'row', maxWidth: 1100, margin: '0rem auto' }}>
+                <style>{`
+                    @media (max-width: 768px) {
+                        .cv-responsive-container {
+                            flex-direction: column !important;
+                        }
+                        .cv-tab-bar-vertical {
+                            display: none !important;
+                        }
+                        .cv-page {
+                            max-width: 100vw !important;
+                            padding: 0.7rem 0.2rem 1.2rem 0.2rem !important;
+                            border-radius: 0 !important;
+                            box-shadow: none !important;
+                        }
+                        .cv-section {
+                            padding: 1rem 0.5rem 0.7rem 0.5rem !important;
+                        }
+                        .cv-item {
+                            grid-template-columns: 1fr !important;
+                            gap: 0.7rem !important;
+                        }
+                    }
+                `}</style>
             {/* Floating vertical tab menu */}
             <nav
                 className="cv-tab-bar-vertical"
@@ -174,6 +197,7 @@ function Section({ title, children, divider, id }: { title: string, children: Re
     return (
         <section
             id={id}
+            className="cv-section"
             style={{
                 marginBottom: '1.2rem',
                 padding: '1.2rem 1.2rem 1rem 2rem', // extra left padding for connector
@@ -205,6 +229,7 @@ function Section({ title, children, divider, id }: { title: string, children: Re
 function CVItem({ years, title, children }: { years?: string, title?: string, children?: React.ReactNode }) {
     return (
         <div
+            className="cv-item"
             style={{
                 marginBottom: '1.1rem',
                 display: 'grid',
@@ -236,18 +261,4 @@ function CVItem({ years, title, children }: { years?: string, title?: string, ch
             </div>
         </div>
     );
-    {/* Vertical connector line */ }
-    <div
-        style={{
-            position: 'absolute',
-            left: 36,
-            top: 'calc(120px + 2.5rem)',
-            bottom: 0,
-            width: 2,
-            background: 'linear-gradient(to bottom, #e5e8ef 60%, #d0d6e1 100%)',
-            zIndex: 1,
-            borderRadius: 2,
-            pointerEvents: 'none',
-        }}
-    />
 }

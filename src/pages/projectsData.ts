@@ -97,7 +97,7 @@ export const projects: Project[] = [
     link: 'https://journals.sagepub.com/doi/full/10.1177/10704965251317436',
     journal: "The Journal of Environment & Development",
     authors: 'Thomas Bernauer, Tobias Böhmelt, Ella Henninger',
-    date: '2025-06-01',
+    date: '2025-02-01',
   },
   {
     id: '10',
