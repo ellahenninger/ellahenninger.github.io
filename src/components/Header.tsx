@@ -12,12 +12,16 @@ const navItems = [
 
 import { useRef, useEffect, useState } from 'react';
 
+
 export default function Header() {
   const location = useLocation();
   const navRef = useRef<HTMLUListElement>(null);
   const [scopeStyle, setScopeStyle] = useState({ left: 0, width: 0 });
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
+
+  // Helper to update nav-scope position
+  const updateScope = () => {
     if (!navRef.current) return;
     const active = navRef.current.querySelector('li.active');
     if (active) {
@@ -28,14 +32,44 @@ export default function Header() {
         width: rect.width,
       });
     }
+  };
+
+  useEffect(() => {
+    updateScope();
+    // Also update on window resize
+    window.addEventListener('resize', updateScope);
+    return () => {
+      window.removeEventListener('resize', updateScope);
+    };
+  }, [location.pathname]);
+
+  // Close menu on route change (mobile)
+  useEffect(() => {
+    setMenuOpen(false);
   }, [location.pathname]);
 
   return (
     <header className="header">
       <div className="header-content header-vertical">
-        <Link to="/" className="site-title">Ella Henninger</Link>
+        <div className="header-mobile-row">
+          <button
+            className="mobile-menu-btn"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            aria-controls="main-nav-list"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <span className="mobile-menu-icon">{menuOpen ? '✕' : '☰'}</span>
+          </button>
+          <Link to="/" className="site-title">Ella Henninger</Link>
+        </div>
         <nav>
-          <ul className="nav-list" ref={navRef} style={{ position: 'relative' }}>
+          <ul
+            className={`nav-list${menuOpen ? ' open' : ''}`}
+            id="main-nav-list"
+            ref={navRef}
+            style={{ position: 'relative' }}
+          >
             <div
               className="nav-scope"
               style={{

@@ -68,8 +68,20 @@
 }
 
 @media (max-width: 768px) {
+    .tab-bar {
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
+      justify-content: flex-start !important;
+      gap: 0.5rem;
+    }
   .articles-grid {
     grid-template-columns: 1fr;
+  }
+  .research {
+    padding-top: 0.2rem !important;
+    margin-top: 0.2rem !important;
   }
 }
 

@@ -42,6 +42,33 @@
   gap: 1.2rem;
 }
 
+@media (max-width: 700px) {
+  .footer-content {
+    gap: 0.7rem;
+  }
+  .footer-content > div:first-child {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0.2rem !important;
+    row-gap: 0.5rem;
+    column-gap: 1.2rem;
+  }
+  .footer-logo {
+    margin-bottom: 0.5rem !important;
+    margin-top: 0.2rem !important;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .footer-content a {
+    min-width: 36px;
+    min-height: 36px;
+    margin: 0 4px;
+  }
+}
+
 .footer-content svg {
   vertical-align: middle;
   width: 28px;
