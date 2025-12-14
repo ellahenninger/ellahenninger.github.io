@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Redirect to index.html with the current path query stored
+      var path = window.location.pathname;
+      var search = window.location.search;
+      window.location.replace(
+        "/" + "?p=" + path + search
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
