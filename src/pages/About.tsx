@@ -44,7 +44,7 @@ export default function About() {
                 CIS
               </a> (Center for Comparative and International Studies) and the&nbsp;
               <a href="https://einstein-school.ethz.ch/en/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 500, color: '#205295' }}>
-                Albert Einstein School of Public Policy
+                Einstein School of Public Policy
               </a>.
             </p>
             <p>
