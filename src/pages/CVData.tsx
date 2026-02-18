@@ -116,6 +116,7 @@ Two weekly tutorials on OLS regression and maximum likelihood estimation`,
     {
         title: 'Conferences',
         items: [
+            { content: '2026 SPSA' },
             { content: '2025 Environmental Politics and Governance, ECPR, SPSA' },
             { content: '2024 EPSA, SPSA' },
         ],
@@ -123,6 +124,7 @@ Two weekly tutorials on OLS regression and maximum likelihood estimation`,
     {
         title: 'Workshops and Summer Schools',
         items: [
+            { content: '2026 Workshop on Climate Change, Inequality, and Policy Contestation, LSE.' },
             { content: '2024 GESIS Workshop Multi-level Structural Equation Modeling, Mannheim.' },
             { content: '2024 GESIS Workshop Cross-cultural Survey Design and Questionnaire Translation and Pretesting.' },
             { content: '2024 GESIS Workshop Earth Observational Data in the Social Sciences, Cologne.' },

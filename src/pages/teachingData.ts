@@ -8,6 +8,12 @@ export interface TeachingClass {
 
 export const teachingClasses: TeachingClass[] = [
   {
+    title: "Assessing Political Feasibility of Policies Public Opinion Research, Survey and Field Experiments",
+    term: "Spring 2026",
+    institution: "ETH Zurich",
+    description: "Introductory course on public opinion research, covering how political attitudes form and influence policymaking, and training students to design and analyse surveys and survey experiments."
+  },
+  {
     title: "Introduction to Political Science",
     term: "Fall 2025",
     institution: "ETH Zurich",
