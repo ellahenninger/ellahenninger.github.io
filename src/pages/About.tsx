@@ -42,10 +42,7 @@ export default function About() {
               </a> (International Political Economy and Environmental Politics) Group which is part of the&nbsp;
               <a href="https://cis.ethz.ch/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 500, color: '#205295' }}>
                 CIS
-              </a> (Center for Comparative and International Studies) and the&nbsp;
-              <a href="https://einstein-school.ethz.ch/en/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 500, color: '#205295' }}>
-                Einstein School of Public Policy
-              </a>.
+              </a> (Center for Comparative and International Studies).
             </p>
             <p>
               My research interests center on how environmental governance takes shape and how citizens respond to it. I examine which actors influence pollution mitigation across different contexts, assessing their incentives and capacities through qualitative and mixed methods. I also study public opinion, focusing on environmental policy support and responsibility allocation, asking how trust shapes support and perceptions of who should address pollution and who is capable of doing so, using quantitative (experimental) methods. In addition, my work investigates the political and attitudinal consequences of environmental stress, using variation in air pollution as a subtle but chronic shock to understand how everyday exposure affects government satisfaction and other political attitudes.
@@ -110,7 +107,7 @@ export default function About() {
             </div>
             <div className="about-contact-eth-profile">
               <span>profile</span><br />
-              <a href="https://ib.ethz.ch/people/ella-henninger.html" target="_blank" rel="noopener noreferrer">ETH Zürich Profile</a>
+              <a href="https://gess.ethz.ch/en/the-department/people/person-detail.MzE3MDEz.TGlzdC81MTIsNjE4MTIwODY=.html" target="_blank" rel="noopener noreferrer">ETH Zürich Profile</a>
             </div>
           </div>
         </div>

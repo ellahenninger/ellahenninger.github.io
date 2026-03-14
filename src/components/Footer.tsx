@@ -17,7 +17,7 @@ export default function Footer() {
             />
           </a>
           <a
-            href="https://scholar.google.com/citations?user=R27JOScAAAAJ&hl=en&oi=ao"
+            href="https://scholar.google.com/citations?user=MXXBKtsAAAAJ&hl=en"
             target="_blank"
             rel="noopener"
             aria-label="Google Scholar"
