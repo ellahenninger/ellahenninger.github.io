@@ -1,5 +1,5 @@
 
-import ellaImg from '../assets/ella-henninger.jpeg';
+import ellaImg from '../assets/ella-henninger3.jpg';
 import './Home.css';
 
 import { useEffect, useState } from 'react';

@@ -3,7 +3,6 @@ import { projects } from '../projectsData';
 
 
 import './ArticlePage.css';
-import { useState, useCallback, useEffect } from 'react';
 
 export default function ArticlePage() {
   const { slug } = useParams<{ slug: string }>();
@@ -18,32 +17,6 @@ export default function ArticlePage() {
   const authors = project.authors || 'Unknown';
   const journal = project.journal;
   const date = project.date;
-
-  // Prepare for multiple images in the future
-  const images = [project.thumbnail].filter(Boolean);
-
-  // Gallery modal state
-  const [galleryOpen, setGalleryOpen] = useState(false);
-  const [galleryIdx, setGalleryIdx] = useState(0);
-
-  // Open modal on image click
-  const openGallery = useCallback((idx: number) => {
-    setGalleryIdx(idx);
-    setGalleryOpen(true);
-  }, []);
-
-  // Close modal
-  const closeGallery = useCallback(() => setGalleryOpen(false), []);
-
-  // ESC key closes modal
-  useEffect(() => {
-    if (!galleryOpen) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeGallery();
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [galleryOpen, closeGallery]);
 
   return (
     <div className="article-page">
