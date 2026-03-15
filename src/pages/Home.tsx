@@ -11,6 +11,10 @@ export default function Home() {
   const [typedTitle, setTypedTitle] = useState('');
   useEffect(() => {
     setFadeIn(true);
+    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 700px)').matches) {
+      setTypedTitle(fullTitle);
+      return;
+    }
     let i = 0;
     const interval = setInterval(() => {
       setTypedTitle(fullTitle.slice(0, i + 1));
