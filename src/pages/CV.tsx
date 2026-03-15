@@ -2,6 +2,7 @@
 
 import { cvSections } from './CVData';
 import cvPdf from '../assets/CV.pdf';
+import './CV.css';
 
 // Helper to detect the Skills section
 function isSkillsSection(title: string) {
@@ -57,6 +58,7 @@ export default function CVPage() {
                 <a
                     href={cvPdf}
                     download
+                        className="cv-download-btn"
                     style={{
                         display: 'inline-block',
                         marginTop: '0.7rem',
@@ -162,16 +164,7 @@ export default function CVPage() {
                                 {section.items.map((item, i) => (
                                     <span
                                         key={i}
-                                        style={{
-                                            display: 'inline-block',
-                                            background: '#222222',
-                                            color: '#f1f1f1ff',
-                                            borderRadius: 14,
-                                            padding: '0.38em 1.1em',
-                                            fontSize: '1.01rem',
-                                            fontWeight: 500,
-                                            letterSpacing: 0.01,
-                                        }}
+                                            className="cv-skill-badge"
                                     >
                                         {item.title}
                                         {item.content ? `: ${item.content}` : ''}
