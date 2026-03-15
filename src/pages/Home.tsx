@@ -36,7 +36,7 @@ export default function Home() {
           <div className="hero-text">
             <h1>
               <span>{typedTitle}</span>
-              <span className={typedTitle.length < fullTitle.length ? 'typing-cursor' : ''}></span>
+              <span className={typedTitle.length < fullTitle.length ? 'typing-cursor' : ''}></span>
             </h1>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
               <span className="hero-title-line" />
