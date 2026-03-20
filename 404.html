@@ -2,16 +2,49 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <script>
-      // Redirect to index.html with the current path query stored
-      var path = window.location.pathname;
-      var search = window.location.search;
-      window.location.replace(
-        "/" + "?p=" + path + search
-      );
-    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>404 — Page Not Found</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; background:#f7f7fb; color:#111; }
+      .card { text-align:center; padding:28px; border-radius:12px; background:white; box-shadow:0 6px 20px rgba(16,24,40,0.08); max-width:560px; }
+      .muted { color:#6b7280; }
+      a.button { display:inline-block; margin-top:12px; padding:8px 14px; background:#111827; color:white; border-radius:8px; text-decoration:none; }
+    </style>
   </head>
   <body>
+    <div class="card">
+      <h1>404 — Page Not Found</h1>
+      <p class="muted" id="info">We couldn't find the page you requested.</p>
+      <p class="muted" id="path"></p>
+      <p class="muted">Redirecting to the homepage in <span id="count">5</span> seconds.</p>
+      <p><a class="button" id="homeLink" href="/">Go to Homepage</a></p>
+    </div>
+
+    <script>
+      // Show the requested path for clarity and do a timed redirect
+      (function(){
+        var path = window.location.pathname || '/';
+        var search = window.location.search || '';
+        var full = path + search;
+        var pathEl = document.getElementById('path');
+        if (pathEl) pathEl.textContent = 'Requested: ' + full;
+
+        var count = 5;
+        var el = document.getElementById('count');
+        var timer = setInterval(function(){
+          count -= 1;
+          if (el) el.textContent = String(count);
+          if (count <= 0) {
+            clearInterval(timer);
+            // preserve original path as query param for client-side routing
+            window.location.replace('/?p=' + encodeURIComponent(full));
+          }
+        }, 1000);
+
+        // Ensure the manual link also preserves the path if user clicks it
+        var homeLink = document.getElementById('homeLink');
+        if (homeLink) homeLink.href = '/?p=' + encodeURIComponent(full);
+      })();
+    </script>
   </body>
 </html>
