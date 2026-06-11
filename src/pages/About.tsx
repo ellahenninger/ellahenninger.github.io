@@ -7,6 +7,12 @@ import './About.css';
 
 const workshops = [
   {
+    title: 'Second Annual Workshop Sustainable Social Policy Research Hub',
+    description: 'Paper presentation',
+    date: '2026-06-02',
+    location: 'LSE, London, UK',
+  },
+  {
     title: 'Climate Change, Inequality, and Policy Contestation',
     description: 'Paper presentation',
     date: '2025-11-10',
