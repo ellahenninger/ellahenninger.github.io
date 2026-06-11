@@ -152,7 +152,7 @@ export const projects: Project[] = [
     title: '(Un)fair to Me - (Un)fair to You? Distributional Implications of Policies and Their Effect on Fairness and Policy Support',
     description: 'Paper project on how different distributional policy designs shape fairness perceptions and support in Delhi and Jakarta.',
     abstract: 'Public support for redistributive policies often hinges on fairness perceptions, yet it remains unclear whether these reflect broader normative principles or merely track material self-interest; a distinction with direct implications for whether policy designs can increase public acceptance. We distinguish two evaluative processes: fairness-to-me, a self-oriented normative judgement of one`s own treatment, and fairness-to-others, a normative judgement of whether the distribution of costs and benefits across societal groups is appropriate. Using a pre-registered 2×2 factorial vignette experiment with approximately 3,400 respondents in Delhi and Jakarta, we vary who pays and who benefits across urban transport policies. Car ownership as a proxy for material stakes shifts fairness-to-me but not fairness-to-others, showing the two dimensions respond differently to personal exposure. Benefit targeting provokes stronger fairness backlash than cost targeting, especially in Jakarta. These findings imply more political space for redistributive policies than accounts reducible to self-interest would predict.',
-    thumbnail: 'Images/Thumbnails/thumbnail_fairness.jpeg',
+    thumbnail: 'Images/Thumbnails/thumbnail_fairness.png',
     tags: ['Work in progress'],
     link: '/research/fairness',
     journal: undefined,
