@@ -91,6 +91,15 @@ Two weekly tutorials on OLS regression and maximum likelihood estimation`,
         title: 'Publications',
         items: [
             {
+                content: <span>Henninger, E., Fournier De Lauriere, C., Nabilla, A., Moolla, R., & Smith, E. K. (2026). Global blind spots in air pollution public opinion: an LLM-assisted mapping of research coverage and survey availability. <i>Environmental Research Letters</i> <a href="http://iopscience.iop.org/article/10.1088/1748-9326/ae7132" target="_blank" rel="noopener noreferrer">doi</a></span>,
+            },
+            {
+                content: <span>Henninger, E., Smith, E. K., Fournier de Lauriere, C., Koubi, V., Moolla, R., Beiser-McGrath, L., & Bernauer, T. (2026). Public support for clean-air action in polluted cities: Air pollution policy. <i>Nature Cities</i>: 1-2. <a href="https://doi.org/10.1038/s44284-026-00455-7" target="_blank" rel="noopener noreferrer">doi</a></span>,
+            },
+            {
+                content: <span>Smith, E. K., Henninger, E., Fournier de Lauriere, C., Koubi, V., Moolla, R., Beiser-McGrath, L. F., & Bernauer, T. (2026). Strong demand for clean air policies in Majority World cities. <i>Nature Cities</i>: 1-14. <a href="https://doi.org/10.1038/s44284-026-00451-x" target="_blank" rel="noopener noreferrer">doi</a></span>,
+            },
+            {
                 content: <span>Bernauer T, Böhmelt T, Henninger E. (2025): Shifting environmental pollution abroad contributes to lower emissions in democracies. <i>PLOS Clim.</i> 4(5): e0000602. <a href="https://doi.org/10.1371/journal.pclm.0000602" target="_blank" rel="noopener noreferrer">doi</a></span>,
             },
             {
@@ -110,7 +119,7 @@ Two weekly tutorials on OLS regression and maximum likelihood estimation`,
     {
         title: 'Reviews',
         items: [
-            { content: 'British Journal of Political Science, Environmental Politics, Global Environmental Politics, Environment and Development Economics' },
+            { content: 'Journal of European Public Policy, British Journal of Political Science, Environmental Politics, Global Environmental Politics, Environment and Development Economics' },
         ],
     },
     {
@@ -124,7 +133,8 @@ Two weekly tutorials on OLS regression and maximum likelihood estimation`,
     {
         title: 'Workshops and Summer Schools',
         items: [
-            { content: '2026 Workshop on Climate Change, Inequality, and Policy Contestation, LSE.' },
+            { content: '2026 Second Annual Workshop Sustainable Social Policy Research Hub, LSE.' },
+            { content: '2025 Workshop on Climate Change, Inequality, and Policy Contestation, LSE.' },
             { content: '2024 GESIS Workshop Multi-level Structural Equation Modeling, Mannheim.' },
             { content: '2024 GESIS Workshop Cross-cultural Survey Design and Questionnaire Translation and Pretesting.' },
             { content: '2024 GESIS Workshop Earth Observational Data in the Social Sciences, Cologne.' },
